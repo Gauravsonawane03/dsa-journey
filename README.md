@@ -4,11 +4,8 @@ This repository documents my journey of learning Data Structures & Algorithms th
 
 The goal is to develop strong algorithmic thinking, recognize common problem-solving patterns, and build the skills required for software engineering interviews.
 
----
-
 ## Repository Structure
 
-```text
 DSA
 │
 ├── 01_Arrays
@@ -16,9 +13,6 @@ DSA
 ├── LeetCode
 ├── README.md
 └── .gitignore
-```
-
----
 
 ## Progress
 
@@ -34,13 +28,15 @@ DSA
 - Prefix Sum
 - Range Sum Queries
 - Subarray Sum
+- Running Sum
+- Longest Zero-Sum Subarray
 - Common Array Manipulation Patterns
 
 ### Current Topic
 
 **Arrays**
 
-Continuing to strengthen array patterns through progressively harder problems.
+Continuing to strengthen array patterns through progressively harder problems, with emphasis on prefix sums, hashing, and subarray-based problem solving.
 
 ### Upcoming
 
@@ -56,8 +52,6 @@ Continuing to strengthen array patterns through progressively harder problems.
 - Greedy Algorithms
 - Backtracking
 
----
-
 ## Problem-Solving Approach
 
 For each problem:
@@ -71,8 +65,6 @@ For each problem:
 7. Test edge cases
 8. Review and commit
 
----
-
 ## Tools
 
 - C++
@@ -80,8 +72,6 @@ For each problem:
 - Git & GitHub
 - LeetCode
 - HackerRank
-
----
 
 ## Goal
 
