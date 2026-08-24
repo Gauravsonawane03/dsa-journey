@@ -11,10 +11,15 @@ The goal is to develop strong algorithmic thinking, recognize common problem-sol
 DSA
 
 │
+
 ├── 01_Arrays
+
 ├── HackerRank
+
 ├── LeetCode
+
 ├── README.md
+
 └── .gitignore
 
 ---
@@ -24,22 +29,49 @@ DSA
 ### Completed / Practiced
 
 - Time & Space Complexity
+
 - Array Fundamentals
+
 - Searching
+
 - Two Pointers
+
 - Sliding Window
+
 - Hashing
+
 - Frequency Counting
+
 - Prefix Sum
+
 - Prefix Sum Indexing
+
 - Prefix Sum + Hash Map
+
 - Range Sum Queries
+
 - Subarray Sum
+
 - Running Sum
+
 - Longest Zero-Sum Subarray
+
 - Longest Subarray with Sum K
+
 - Subarray Sum Equals K
+
 - Two Sum
+
+- Longest Subarray with Equal 0s and 1s
+  - Prefix Sum Transformation
+  - Hash Map
+  - Zero-Sum Subarray Reasoning
+
+- Longest Consecutive Sequence
+  - Hash Set
+  - Sequence Start Detection
+  - Consecutive Sequence Expansion
+
 - Common Array Manipulation Patterns
 
 ### Current Topic
@@ -49,23 +81,39 @@ DSA
 Strengthening array problem-solving patterns through progressively harder problems, with emphasis on:
 
 - Prefix sums
+
 - Hashing and frequency maps
+
+- Hash sets
+
 - Subarray problems
+
 - Pattern recognition
+
 - Independent problem solving
 
 ### Upcoming
 
 - Sorting
+
 - Strings
+
 - Recursion
+
 - Linked Lists
+
 - Stacks & Queues
+
 - Trees
+
 - Graphs
+
 - Heaps
+
 - Dynamic Programming
+
 - Greedy Algorithms
+
 - Backtracking
 
 ---
@@ -75,12 +123,19 @@ Strengthening array problem-solving patterns through progressively harder proble
 For each problem:
 
 1. Understand the problem
+
 2. Identify the pattern
+
 3. Develop a brute-force approach
+
 4. Analyze time and space complexity
+
 5. Optimize
+
 6. Implement independently
+
 7. Test edge cases
+
 8. Review and commit
 
 The focus is on demonstrated understanding and independent problem-solving rather than simply increasing the number of problems solved.
@@ -90,9 +145,13 @@ The focus is on demonstrated understanding and independent problem-solving rathe
 ## Tools
 
 - C++
+
 - VS Code
+
 - Git & GitHub
+
 - LeetCode
+
 - HackerRank
 
 ---
