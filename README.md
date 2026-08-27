@@ -29,61 +29,40 @@ DSA
 ### Completed / Practiced
 
 - Time & Space Complexity
-
 - Array Fundamentals
-
 - Searching
-
 - Two Pointers
-
 - Sliding Window
-
 - Hashing
-
 - Frequency Counting
-
 - Prefix Sum
-
 - Prefix Sum Indexing
-
 - Prefix Sum + Hash Map
-
 - Range Sum Queries
-
 - Subarray Sum
-
 - Running Sum
-
 - Longest Zero-Sum Subarray
-
 - Longest Subarray with Sum K
-
 - Subarray Sum Equals K
-
 - Two Sum
-
 - Longest Subarray with Equal 0s and 1s
   - Prefix Sum Transformation
   - Hash Map
   - Zero-Sum Subarray Reasoning
-
 - Longest Consecutive Sequence
   - Hash Set
   - Sequence Start Detection
   - Consecutive Sequence Expansion
-
 - Minimum Size Subarray
   - Sliding Window
   - Two Pointers
   - Variable-Size Window
-
 - Pattern Recognition Practice
   - Choosing between Prefix Sum, Hash Map, Hash Set, and Sliding Window
   - Identifying when a recently learned pattern does not apply
-
 - Common Array Manipulation Patterns
 
-### August 26, 2026 — Fresh Problem Practice
+### August 27, 2026 — Fresh Problem Practice
 
 - Practiced the fresh-problem workflow:
   - Quick recall
@@ -92,26 +71,42 @@ DSA
   - Independent implementation
   - Review and debugging
 
-- Longest Unique Subarray
-  - Sliding Window
-  - Hash Set
+- Two Sum
+  - Hashing
+  - Unsorted array
+  - Complement lookup
+  - Tested duplicate values
+  - Tested cases where no pair exists
+  - O(N) average time
+  - O(N) space
+
+- Maximum Sum of Fixed-Size Subarray
+  - Fixed-size Sliding Window
+  - Window expansion
+  - Removing the outgoing element
+  - Maintaining a running window sum
+  - Handling negative values
+  - O(N) time
+  - O(1) space
+
+- Strengthened pattern selection:
+  - Pair + unsorted array → Hashing
+  - Contiguous subarray + fixed size → Sliding Window
+  - Contiguous subarray + sum relationship → Prefix Sum + Hashing
+  - Pair/triplet + sorted array → Two Pointers
+
+- Identified an important distinction:
+  - A problem involving a subarray does not automatically require Prefix Sum
+  - Pattern selection must be based on the complete problem structure and constraints
+
+- Created a DSA pattern-revision section covering:
   - Two Pointers
-  - Window expansion and shrinking
-  - Handling duplicate elements
-  - Tested multiple edge cases and corrected implementation issues
-
-- Longest Subarray with Target Sum
-  - Prefix Sum
-  - Hash Map
-  - Prefix Sum Difference
-  - `sum - target` recognition
-  - Earliest prefix index for maximum length
-  - Correct handling of subarrays starting at index `0`
-  - Tested with positive and negative values
-
-- Strengthened the distinction between:
-  - Sliding Window for suitable subarray constraints
-  - Prefix Sum + Hash Map when negative numbers make ordinary sliding window invalid
+  - Sliding Window
+  - Hashing
+  - Prefix Sum + Hashing
+  - Pattern recognition signals
+  - Common limitations
+  - Implementation considerations
 
 ### Current Topic
 
@@ -120,45 +115,27 @@ DSA
 Strengthening array problem-solving patterns through progressively harder problems, with emphasis on:
 
 - Pattern recognition
-
 - Prefix sums
-
 - Hashing and frequency maps
-
 - Hash sets
-
 - Two pointers
-
 - Sliding window
-
 - Subarray problems
-
 - Independent problem solving
-
 - Choosing the appropriate approach rather than memorizing patterns
 
 ### Upcoming
 
 - Sorting
-
 - Strings
-
 - Recursion
-
 - Linked Lists
-
 - Stacks & Queues
-
 - Trees
-
 - Graphs
-
 - Heaps
-
 - Dynamic Programming
-
 - Greedy Algorithms
-
 - Backtracking
 
 ---
@@ -168,19 +145,12 @@ Strengthening array problem-solving patterns through progressively harder proble
 For each problem:
 
 1. Understand the problem
-
 2. Identify the pattern
-
 3. Develop a brute-force approach
-
 4. Analyze time and space complexity
-
 5. Optimize
-
 6. Implement independently
-
 7. Test edge cases
-
 8. Review and commit
 
 The focus is on demonstrated understanding and independent problem-solving rather than simply increasing the number of problems solved.
@@ -190,13 +160,9 @@ The focus is on demonstrated understanding and independent problem-solving rathe
 ## Tools
 
 - C++
-
 - VS Code
-
 - Git & GitHub
-
 - LeetCode
-
 - HackerRank
 
 ---
