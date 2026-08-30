@@ -29,100 +29,38 @@ DSA
 ### Completed / Practiced
 
 - Time & Space Complexity
-
 - Array Fundamentals
-
 - Searching
-
 - Two Pointers
-
 - Sliding Window
-
 - Hashing
-
 - Frequency Counting
-
 - Prefix Sum
-
 - Prefix Sum Indexing
-
 - Prefix Sum + Hash Map
-
 - Range Sum Queries
-
 - Subarray Sum
-
 - Running Sum
-
 - Longest Zero-Sum Subarray
-
 - Longest Subarray with Sum K
-
 - Subarray Sum Equals K
-
 - Two Sum
-
 - Longest Subarray with Equal 0s and 1s
   - Prefix Sum Transformation
   - Hash Map
   - Zero-Sum Subarray Reasoning
-
 - Longest Consecutive Sequence
   - Hash Set
   - Sequence Start Detection
   - Consecutive Sequence Expansion
-
 - Minimum Size Subarray
   - Sliding Window
   - Two Pointers
   - Variable-Size Window
-
 - Pattern Recognition Practice
   - Choosing between Prefix Sum, Hash Map, Hash Set, and Sliding Window
   - Identifying when a recently learned pattern does not apply
-
 - Common Array Manipulation Patterns
-
-### August 29, 2026 — Mixed-Pattern Practice
-
-- Continued the problem-solving workflow:
-  - Pattern identification
-  - Reasoning before coding
-  - Independent implementation
-  - Testing and debugging
-  - Complexity analysis
-
-- Longest Consecutive Sequence
-  - Hash Set
-  - Sequence Start Detection
-  - Consecutive Sequence Expansion
-  - O(N) average time
-  - O(N) space
-
-- Subarray Sum Equals K
-  - Prefix Sum + Hash Map
-  - Prefix Sum Frequency
-  - `sum - target` recognition
-  - Counting multiple valid subarrays
-  - Handling negative values
-  - O(N) time
-  - O(N) space
-
-- Product of Array Except Self
-  - Prefix/Suffix Product technique
-  - Left-to-right prefix products
-  - Right-to-left suffix products
-  - Excluding the current element through update order
-  - Handling zero values
-  - O(N) time
-  - O(1) extra space excluding the output array
-
-- Strengthened independent pattern selection:
-  - Consecutive sequence → Hash Set
-  - Subarray sum relationship → Prefix Sum + Hash Map
-  - Product excluding current index → Prefix/Suffix Products
-
-- Practiced previously encountered problems without looking back at previous implementations, reinforcing independent recall, implementation, debugging, and pattern recognition.
 
 ---
 
@@ -133,47 +71,66 @@ DSA
 Strengthening array problem-solving patterns through progressively harder problems, with emphasis on:
 
 - Pattern recognition
-
 - Prefix sums
-
 - Hashing and frequency maps
-
 - Hash sets
-
 - Two pointers
-
 - Sliding window
-
 - Subarray problems
-
 - Independent problem solving
-
 - Choosing the appropriate approach rather than memorizing patterns
+
+---
+
+## Latest Learning Log
+
+### August 30, 2026 — Mixed-Pattern Practice
+
+- Continued the mixed-problem workflow:
+  - Quick pattern recall
+  - Pattern selection before coding
+  - Reasoning before implementation
+  - Independent implementation
+  - Testing and debugging
+
+- Longest Distinct Subarray
+  - Sliding Window + Hash Set
+  - Maintained a window containing only distinct elements
+  - Used the hash set to detect duplicates
+  - Shrunk the window until the duplicate was removed
+  - O(N) time
+  - O(N) space
+
+- Longest Subarray with Sum K
+  - Prefix Sum + Hash Map
+  - Used `currentPrefixSum - k` to identify valid subarrays
+  - Stored the earliest index for each prefix sum
+  - Understood why `prefixSum[0] = -1` is required
+  - Handled negative values
+  - O(N) time
+  - O(N) space
+
+- Strengthened pattern recognition:
+  - Contiguous subarray + distinct elements → Sliding Window + Hash Set
+  - Contiguous subarray + exact sum + negative values → Prefix Sum + Hash Map
+  - Avoiding incorrect pattern selection based only on keywords such as "sum" or negative values
+
+- Practiced previously encountered concepts without referring to previous implementations, focusing on independent recall, reasoning, implementation, debugging, and pattern transfer.
 
 ---
 
 ## Upcoming
 
 - Sorting
-
 - Strings
-
 - Recursion
-
 - Linked Lists
-
 - Stacks & Queues
-
 - Trees
-
 - Graphs
-
 - Heaps
-
 - Dynamic Programming
-
 - Greedy Algorithms
-
 - Backtracking
 
 ---
@@ -183,19 +140,12 @@ Strengthening array problem-solving patterns through progressively harder proble
 For each problem:
 
 1. Understand the problem
-
 2. Identify the pattern
-
 3. Develop a brute-force approach
-
 4. Analyze time and space complexity
-
 5. Optimize
-
 6. Implement independently
-
 7. Test edge cases
-
 8. Review and commit
 
 The focus is on demonstrated understanding and independent problem-solving rather than simply increasing the number of problems solved.
@@ -205,13 +155,9 @@ The focus is on demonstrated understanding and independent problem-solving rathe
 ## Tools
 
 - C++
-
 - VS Code
-
 - Git & GitHub
-
 - LeetCode
-
 - HackerRank
 
 ---
