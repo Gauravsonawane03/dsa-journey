@@ -61,6 +61,18 @@ DSA
   - Choosing between Prefix Sum, Hash Map, Hash Set, and Sliding Window
   - Identifying when a recently learned pattern does not apply
 - Common Array Manipulation Patterns
+- Second Largest Element
+  - Single-pass traversal
+  - Maintaining largest and second-largest values
+  - Handling duplicate largest values
+  - Handling absence of a distinct second-largest element
+- Two Sum
+  - Hash Map
+  - Complement lookup
+  - Value-to-index mapping
+  - O(N) average time
+  - O(N) space
+  - LeetCode accepted solution
 
 ---
 
@@ -79,43 +91,37 @@ Strengthening array problem-solving patterns through progressively harder proble
 - Subarray problems
 - Independent problem solving
 - Choosing the appropriate approach rather than memorizing patterns
+- Applying learned patterns to LeetCode problems
 
 ---
 
 ## Latest Learning Log
 
-### August 30, 2026 — Mixed-Pattern Practice
+### September 1, 2026 — A2Z + LeetCode Workflow
 
-- Continued the mixed-problem workflow:
-  - Quick pattern recall
-  - Pattern selection before coding
-  - Reasoning before implementation
-  - Independent implementation
-  - Testing and debugging
-
-- Longest Distinct Subarray
-  - Sliding Window + Hash Set
-  - Maintained a window containing only distinct elements
-  - Used the hash set to detect duplicates
-  - Shrunk the window until the duplicate was removed
+- Started the A2Z + LeetCode problem-solving workflow.
+- Practiced **Second Largest Element**
+  - Reviewed the single-pass approach
+  - Maintained largest and second-largest values
+  - Handled duplicate largest values
+  - Tested the no-distinct-second-largest edge case
   - O(N) time
-  - O(N) space
-
-- Longest Subarray with Sum K
-  - Prefix Sum + Hash Map
-  - Used `currentPrefixSum - k` to identify valid subarrays
-  - Stored the earliest index for each prefix sum
-  - Understood why `prefixSum[0] = -1` is required
-  - Handled negative values
-  - O(N) time
-  - O(N) space
-
-- Strengthened pattern recognition:
-  - Contiguous subarray + distinct elements → Sliding Window + Hash Set
-  - Contiguous subarray + exact sum + negative values → Prefix Sum + Hash Map
-  - Avoiding incorrect pattern selection based only on keywords such as "sum" or negative values
-
-- Practiced previously encountered concepts without referring to previous implementations, focusing on independent recall, reasoning, implementation, debugging, and pattern transfer.
+  - O(1) space
+- Solved **LeetCode #1 — Two Sum**
+  - Identified hashing as the appropriate pattern for an unsorted array
+  - Used `target - current` as the required complement
+  - Stored values with their indices using a hash map
+  - Implemented and debugged the LeetCode function format
+  - Submitted successfully
+  - Accepted with 65/65 test cases
+- Saved the accepted LeetCode solution in the `LeetCode` folder.
+- Strengthened the workflow:
+  - Understand the problem
+  - Select a learned pattern
+  - Implement independently
+  - Test and debug
+  - Submit to LeetCode
+  - Record the final solution
 
 ---
 
