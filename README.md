@@ -73,6 +73,19 @@ DSA
   - O(N) average time
   - O(N) space
   - LeetCode accepted solution
+- Remove Duplicates from Sorted Array
+  - Two Pointers
+  - In-place modification
+  - O(N) time
+  - O(1) extra space
+  - LeetCode accepted solution
+- Longest Substring Without Repeating Characters
+  - Sliding Window
+  - Hashing
+  - Pattern transfer from arrays to strings
+  - O(N) time
+  - O(N) worst-case space
+  - LeetCode accepted solution
 
 ---
 
@@ -97,31 +110,25 @@ Strengthening array problem-solving patterns through progressively harder proble
 
 ## Latest Learning Log
 
-### September 1, 2026 — A2Z + LeetCode Workflow
+### September 2, 2026 — A2Z + LeetCode Practice
 
-- Started the A2Z + LeetCode problem-solving workflow.
-- Practiced **Second Largest Element**
-  - Reviewed the single-pass approach
-  - Maintained largest and second-largest values
-  - Handled duplicate largest values
-  - Tested the no-distinct-second-largest edge case
+- Practiced **Remove Duplicates from Sorted Array**
+  - Identified Two Pointers as the appropriate pattern
+  - Implemented in-place modification
+  - Tested normal, all-duplicate, and empty-array cases
   - O(N) time
-  - O(1) space
-- Solved **LeetCode #1 — Two Sum**
-  - Identified hashing as the appropriate pattern for an unsorted array
-  - Used `target - current` as the required complement
-  - Stored values with their indices using a hash map
-  - Implemented and debugged the LeetCode function format
+  - O(1) extra space
+  - Submitted successfully to LeetCode #26
+
+- Solved **LeetCode #3 — Longest Substring Without Repeating Characters**
+  - Identified Sliding Window + Hashing
+  - Transferred the longest-distinct-subarray pattern from arrays to strings
+  - Implemented and submitted independently
+  - O(N) time
+  - O(N) worst-case space
   - Submitted successfully
-  - Accepted with 65/65 test cases
-- Saved the accepted LeetCode solution in the `LeetCode` folder.
-- Strengthened the workflow:
-  - Understand the problem
-  - Select a learned pattern
-  - Implement independently
-  - Test and debug
-  - Submit to LeetCode
-  - Record the final solution
+
+- Strengthened independent pattern recognition and implementation.
 
 ---
 
