@@ -49,23 +49,29 @@ DSA
   - Prefix Sum Transformation
   - Hash Map
   - Zero-Sum Subarray Reasoning
+
 - Longest Consecutive Sequence
   - Hash Set
   - Sequence Start Detection
   - Consecutive Sequence Expansion
+
 - Minimum Size Subarray
   - Sliding Window
   - Two Pointers
   - Variable-Size Window
+
 - Pattern Recognition Practice
   - Choosing between Prefix Sum, Hash Map, Hash Set, and Sliding Window
   - Identifying when a recently learned pattern does not apply
+
 - Common Array Manipulation Patterns
+
 - Second Largest Element
   - Single-pass traversal
   - Maintaining largest and second-largest values
   - Handling duplicate largest values
   - Handling absence of a distinct second-largest element
+
 - Two Sum
   - Hash Map
   - Complement lookup
@@ -73,12 +79,14 @@ DSA
   - O(N) average time
   - O(N) space
   - LeetCode accepted solution
+
 - Remove Duplicates from Sorted Array
   - Two Pointers
   - In-place modification
   - O(N) time
   - O(1) extra space
   - LeetCode accepted solution
+
 - Longest Substring Without Repeating Characters
   - Sliding Window
   - Hashing
@@ -86,6 +94,25 @@ DSA
   - O(N) time
   - O(N) worst-case space
   - LeetCode accepted solution
+
+- Binary Search
+  - Sorted array requirement
+  - Search space
+  - `low`, `high`, and `mid`
+  - Search space reduction
+  - Boundary movement
+  - `low <= high` loop condition
+  - O(log N) time
+  - O(1) space
+
+- Search Insert Position
+  - Binary Search
+  - Finding the target index
+  - Finding the correct insertion position
+  - Using `low` as the insertion position when the target is absent
+  - O(log N) time
+  - O(1) space
+  - LeetCode #35 accepted solution
 
 ---
 
@@ -101,6 +128,7 @@ Strengthening array problem-solving patterns through progressively harder proble
 - Hash sets
 - Two pointers
 - Sliding window
+- Binary Search
 - Subarray problems
 - Independent problem solving
 - Choosing the appropriate approach rather than memorizing patterns
@@ -110,25 +138,26 @@ Strengthening array problem-solving patterns through progressively harder proble
 
 ## Latest Learning Log
 
-### September 2, 2026 — A2Z + LeetCode Practice
+### September 3, 2026 — Binary Search + LeetCode Practice
 
-- Practiced **Remove Duplicates from Sorted Array**
-  - Identified Two Pointers as the appropriate pattern
-  - Implemented in-place modification
-  - Tested normal, all-duplicate, and empty-array cases
-  - O(N) time
-  - O(1) extra space
-  - Submitted successfully to LeetCode #26
+Started Binary Search as a new DSA topic with focus on understanding the algorithm and its search-space invariant rather than memorizing a template.
 
-- Solved **LeetCode #3 — Longest Substring Without Repeating Characters**
-  - Identified Sliding Window + Hashing
-  - Transferred the longest-distinct-subarray pattern from arrays to strings
-  - Implemented and submitted independently
-  - O(N) time
-  - O(N) worst-case space
-  - Submitted successfully
+- Learned why Binary Search requires a sorted/searchable structure
+- Understood the search space and the role of `low`, `high`, and `mid`
+- Practiced eliminating half of the search space after each comparison
+- Understood why `high = mid - 1` is used when searching the left half
+- Understood why `low = mid + 1` is used when searching the right half
+- Understood why `while (low <= high)` is required to check the final remaining element
+- Implemented standard Binary Search in C++
+- Tested the implementation with existing and missing targets
+- Practiced **Search Insert Position**
+- Understood why `low` becomes the insertion position when the target is absent
+- Solved **LeetCode #35 — Search Insert Position**
+- Submitted successfully with 66/66 test cases passed
+- Saved the accepted LeetCode solution in the `LeetCode` folder
+- Reviewed O(log N) time and O(1) space complexity
 
-- Strengthened independent pattern recognition and implementation.
+The focus was understanding why each search boundary moves and how the search space shrinks rather than memorizing the Binary Search template.
 
 ---
 
