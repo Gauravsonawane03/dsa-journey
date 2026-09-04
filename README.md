@@ -29,22 +29,39 @@ DSA
 ### Completed / Practiced
 
 - Time & Space Complexity
+
 - Array Fundamentals
+
 - Searching
+
 - Two Pointers
+
 - Sliding Window
+
 - Hashing
+
 - Frequency Counting
+
 - Prefix Sum
+
 - Prefix Sum Indexing
+
 - Prefix Sum + Hash Map
+
 - Range Sum Queries
+
 - Subarray Sum
+
 - Running Sum
+
 - Longest Zero-Sum Subarray
+
 - Longest Subarray with Sum K
+
 - Subarray Sum Equals K
+
 - Two Sum
+
 - Longest Subarray with Equal 0s and 1s
   - Prefix Sum Transformation
   - Hash Map
@@ -114,6 +131,17 @@ DSA
   - O(1) space
   - LeetCode #35 accepted solution
 
+- Find First and Last Position of Element in Sorted Array
+  - Binary Search
+  - Finding the first occurrence
+  - Finding the last occurrence
+  - Moving left after finding the target for the first occurrence
+  - Moving right after finding the target for the last occurrence
+  - Using two Binary Search passes
+  - O(log N) time
+  - O(1) extra space
+  - LeetCode #34 accepted solution
+
 ---
 
 ## Current Topic
@@ -123,56 +151,85 @@ DSA
 Strengthening array problem-solving patterns through progressively harder problems, with emphasis on:
 
 - Pattern recognition
+
 - Prefix sums
+
 - Hashing and frequency maps
+
 - Hash sets
+
 - Two pointers
+
 - Sliding window
+
 - Binary Search
+
 - Subarray problems
+
 - Independent problem solving
+
 - Choosing the appropriate approach rather than memorizing patterns
+
 - Applying learned patterns to LeetCode problems
 
 ---
 
 ## Latest Learning Log
 
-### September 3, 2026 — Binary Search + LeetCode Practice
+### September 4, 2026 — Binary Search + LeetCode Practice
 
-Started Binary Search as a new DSA topic with focus on understanding the algorithm and its search-space invariant rather than memorizing a template.
+Continued Binary Search by practicing variations of standard target search and understanding how the search direction changes depending on the required result.
 
-- Learned why Binary Search requires a sorted/searchable structure
-- Understood the search space and the role of `low`, `high`, and `mid`
-- Practiced eliminating half of the search space after each comparison
-- Understood why `high = mid - 1` is used when searching the left half
-- Understood why `low = mid + 1` is used when searching the right half
-- Understood why `while (low <= high)` is required to check the final remaining element
-- Implemented standard Binary Search in C++
-- Tested the implementation with existing and missing targets
-- Practiced **Search Insert Position**
-- Understood why `low` becomes the insertion position when the target is absent
-- Solved **LeetCode #35 — Search Insert Position**
-- Submitted successfully with 66/66 test cases passed
-- Saved the accepted LeetCode solution in the `LeetCode` folder
-- Reviewed O(log N) time and O(1) space complexity
+- Reviewed the Binary Search invariant and boundary movement
 
-The focus was understanding why each search boundary moves and how the search space shrinks rather than memorizing the Binary Search template.
+- Practiced finding the first occurrence of a target in a sorted array
+
+- Practiced finding the last occurrence of a target in a sorted array
+
+- Understood why the search continues after finding the target
+
+- Understood why the first occurrence requires searching the left half
+
+- Understood why the last occurrence requires searching the right half
+
+- Implemented first-occurrence and last-occurrence Binary Search logic
+
+- Tested target-found and target-not-found cases
+
+- Combined both searches to solve **LeetCode #34 — Find First and Last Position of Element in Sorted Array**
+
+- Used two Binary Search passes to find the first and last positions
+
+- Added the accepted solution to the `LeetCode` folder
+
+- Reviewed O(log N) time and O(1) extra space
+
+The focus was understanding how the Binary Search invariant can be adapted to find boundary positions rather than simply locating a target.
 
 ---
 
 ## Upcoming
 
 - Sorting
+
 - Strings
+
 - Recursion
+
 - Linked Lists
+
 - Stacks & Queues
+
 - Trees
+
 - Graphs
+
 - Heaps
+
 - Dynamic Programming
+
 - Greedy Algorithms
+
 - Backtracking
 
 ---
@@ -182,12 +239,19 @@ The focus was understanding why each search boundary moves and how the search sp
 For each problem:
 
 1. Understand the problem
+
 2. Identify the pattern
+
 3. Develop a brute-force approach
+
 4. Analyze time and space complexity
+
 5. Optimize
+
 6. Implement independently
+
 7. Test edge cases
+
 8. Review and commit
 
 The focus is on demonstrated understanding and independent problem-solving rather than simply increasing the number of problems solved.
@@ -197,9 +261,13 @@ The focus is on demonstrated understanding and independent problem-solving rathe
 ## Tools
 
 - C++
+
 - VS Code
+
 - Git & GitHub
+
 - LeetCode
+
 - HackerRank
 
 ---
