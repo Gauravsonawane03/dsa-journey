@@ -142,6 +142,16 @@ DSA
   - O(1) extra space
   - LeetCode #34 accepted solution
 
+- Search in Rotated Sorted Array
+  - Modified Binary Search
+  - Identifying the sorted half
+  - Determining whether the target lies within the sorted half
+  - Narrowing the search space based on sorted boundaries
+  - Handling rotated sorted arrays
+  - O(log N) time
+  - O(1) extra space
+  - LeetCode #33 accepted solution
+
 ---
 
 ## Current Topic
@@ -176,35 +186,33 @@ Strengthening array problem-solving patterns through progressively harder proble
 
 ## Latest Learning Log
 
-### September 4, 2026 — Binary Search + LeetCode Practice
+### September 5, 2026 — Binary Search Consolidation + LeetCode Practice
 
-Continued Binary Search by practicing variations of standard target search and understanding how the search direction changes depending on the required result.
+Consolidated Binary Search by reviewing previously learned variations and implementing a rotated-array variation that requires adapting the standard Binary Search logic.
 
-- Reviewed the Binary Search invariant and boundary movement
+- Recalled standard Binary Search, first occurrence, last occurrence, and boundary movement
 
-- Practiced finding the first occurrence of a target in a sorted array
+- Reviewed the Binary Search invariant and search-space reduction
 
-- Practiced finding the last occurrence of a target in a sorted array
+- Practiced identifying which half of a rotated sorted array is sorted
 
-- Understood why the search continues after finding the target
+- Understood why at least one half remains sorted after rotation
 
-- Understood why the first occurrence requires searching the left half
+- Learned how to determine whether the target lies within the sorted half
 
-- Understood why the last occurrence requires searching the right half
-
-- Implemented first-occurrence and last-occurrence Binary Search logic
+- Implemented modified Binary Search for a rotated sorted array
 
 - Tested target-found and target-not-found cases
 
-- Combined both searches to solve **LeetCode #34 — Find First and Last Position of Element in Sorted Array**
+- Solved **LeetCode #33 — Search in Rotated Sorted Array**
 
-- Used two Binary Search passes to find the first and last positions
+- Submitted successfully with 197/197 test cases passed
 
 - Added the accepted solution to the `LeetCode` folder
 
 - Reviewed O(log N) time and O(1) extra space
 
-The focus was understanding how the Binary Search invariant can be adapted to find boundary positions rather than simply locating a target.
+The focus was consolidating the Binary Search block by adapting the core search-space reasoning to a rotated sorted array rather than memorizing a separate template.
 
 ---
 
