@@ -25,15 +25,13 @@ int main()
 
     Node *head = &node1;
     Node *current = head;
-
-    while(current->next->next != nullptr){
+    while (current != nullptr && current->data!=20)
+    {
         current = current->next;
     }
-    current->next = nullptr;
-    current = head;
-    while (current != nullptr)
-    {
-        cout << current->data << endl;
-        current = current->next;
+    if(current != nullptr){
+        cout<<"Target was found"<<endl;
+    }else{
+    cout<<"Target not found"<<endl;
     }
 }
