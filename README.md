@@ -120,6 +120,8 @@ DSA
 
 - Counting the number of nodes
 
+- Detecting cycles using an unordered set
+
 ---
 
 ## Current Topic
@@ -144,21 +146,31 @@ Currently strengthening:
 
 ## Latest Learning Log
 
-### September 10, 2026 — Linked List Practice
+### September 12, 2026 — Binary Search + Linked List Strengthening
 
-Continued strengthening linked-list fundamentals through implementation practice.
+Strengthened Binary Search and Linked List understanding through Striver A2Z revision and independent problem solving.
 
-- Practiced deleting the last node of a singly linked list
+- Revisited Binary Search using the Striver A2Z material
 
-- Practiced searching for a target node
+- Explained Binary Search reasoning and search-space reduction
 
-- Practiced finding the middle node using slow and fast pointers
+- Solved Binary Search independently — LeetCode #704
 
-- Practiced counting the number of nodes
+- Analyzed Binary Search time complexity as O(log N) and space complexity as O(1)
 
-- Reinforced pointer traversal and `nullptr` handling
+- Revisited Linked List fundamentals using the Striver A2Z material
 
-- Tested the implementations through compilation and execution
+- Reviewed node structure, traversal, insertion, deletion, and reversal
+
+- Solved Linked List Cycle independently — LeetCode #141
+
+- Implemented cycle detection using an unordered set of node pointers
+
+- Analyzed cycle detection time complexity as O(N) and space complexity as O(N)
+
+- Tested and debugged the implementation until accepted
+
+- Added the accepted solutions to the LeetCode folder
 
 ---
 
