@@ -11,11 +11,17 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 DSA
 
 ├── 01_Arrays
+
 ├── 02_Linked_List
+
 ├── 03_Recursion
+
 ├── HackerRank
+
 ├── LeetCode
+
 ├── README.md
+
 └── .gitignore
 
 ---
@@ -69,6 +75,7 @@ DSA
 - Finding the Middle using Slow and Fast Pointers
 - Counting Nodes
 - Cycle Detection using `unordered_set`
+- Floyd's Cycle Detection using Slow and Fast Pointers
 - Linked List Cycle — LeetCode #141
 
 ### Recursion
@@ -89,6 +96,10 @@ DSA
 - Palindrome Checking
 - Sum of Array Elements
 - Index-based Recursive Problem Solving
+- Take/Skip Recursion
+- Generating Subsequences
+- Subsequences with Sum K
+- Backtracking with `push_back()` / `pop_back()`
 
 ---
 
@@ -102,6 +113,7 @@ Currently strengthening:
 - Base-case reasoning
 - Recursive call flow and stack unwinding
 - Index-based recursion
+- Take/skip recursion
 - Backtracking
 - Independent implementation
 - Testing and debugging
@@ -111,15 +123,15 @@ Currently strengthening:
 
 ## Recent Progress
 
-### September 15, 2026
+### September 16, 2026
 
-- Continued recursion and backtracking practice.
-- Implemented Reverse Array using recursion with two-pointer swapping.
-- Implemented recursive palindrome checking using two-pointer comparison.
-- Implemented Sum of Array using index-based recursion.
-- Independently reconstructed and implemented First Occurrence using Binary Search.
+- Continued Recursion/Backtracking practice with branching recursion.
+- Implemented generation of all subsequences using take/skip recursion.
+- Implemented subsequences with sum K using backtracking with `push_back()` / `pop_back()`.
+- Reviewed exponential recursion, `2^N` subsequences, and recursion depth.
+- Reconstructed Floyd's Cycle Detection using slow and fast pointers.
+- Independently implemented and tested linked-list cycle detection.
 - Tested and debugged all implementations.
-- Reviewed time and auxiliary space complexity.
 
 ---
 
