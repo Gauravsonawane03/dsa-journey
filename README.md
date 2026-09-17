@@ -11,17 +11,11 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 DSA
 
 ├── 01_Arrays
-
 ├── 02_Linked_List
-
 ├── 03_Recursion
-
 ├── HackerRank
-
 ├── LeetCode
-
 ├── README.md
-
 └── .gitignore
 
 ---
@@ -29,7 +23,6 @@ DSA
 ## Progress
 
 ### Arrays & Common Patterns
-
 - Time & Space Complexity
 - Array Fundamentals
 - Searching
@@ -47,19 +40,18 @@ DSA
 - Longest Substring Without Repeating Characters
 
 ### Binary Search
-
 - Standard Binary Search
 - Search Insert Position — LeetCode #35
 - First and Last Position — LeetCode #34
 - Search in Rotated Sorted Array — LeetCode #33
 - First Occurrence using Binary Search
+- Last Occurrence using Binary Search
 - Boundary Reasoning
 - Search-space Reduction
 - Sorted-half Identification
 - O(log N) Time and O(1) Auxiliary Space
 
 ### Linked Lists
-
 - Linked List Fundamentals and Use Cases
 - Node Structure and Pointers
 - Singly Linked Lists
@@ -79,7 +71,6 @@ DSA
 - Linked List Cycle — LeetCode #141
 
 ### Recursion
-
 - Recursive Function Fundamentals
 - Base Case and Recursive Case
 - Recursive Call Flow
@@ -99,7 +90,11 @@ DSA
 - Take/Skip Recursion
 - Generating Subsequences
 - Subsequences with Sum K
+- Checking Whether a Subsequence with Sum K Exists
+- Counting Subsequences with Sum K
 - Backtracking with `push_back()` / `pop_back()`
+- Existence vs Counting Recursion Patterns
+- Early Termination in Recursive Search
 
 ---
 
@@ -115,6 +110,8 @@ Currently strengthening:
 - Index-based recursion
 - Take/skip recursion
 - Backtracking
+- Existence vs counting recursion
+- Early termination
 - Independent implementation
 - Testing and debugging
 - Time and auxiliary space analysis
@@ -123,15 +120,16 @@ Currently strengthening:
 
 ## Recent Progress
 
-### September 16, 2026
-
+### September 17, 2026
 - Continued Recursion/Backtracking practice with branching recursion.
-- Implemented generation of all subsequences using take/skip recursion.
-- Implemented subsequences with sum K using backtracking with `push_back()` / `pop_back()`.
-- Reviewed exponential recursion, `2^N` subsequences, and recursion depth.
-- Reconstructed Floyd's Cycle Detection using slow and fast pointers.
-- Independently implemented and tested linked-list cycle detection.
-- Tested and debugged all implementations.
+- Reviewed recursive state, state transition, call-stack unwinding, and branching recursion.
+- Reviewed why `push_back()` / `pop_back()` is required when backtracking through choices.
+- Implemented checking whether a subsequence with sum K exists using take/skip recursion and early termination.
+- Implemented counting subsequences with sum K using recursive branch counting.
+- Reviewed the difference between existence (`take || skip`) and counting (`take + skip`) recursion patterns.
+- Analyzed `O(2^N)` time complexity and `O(N)` auxiliary recursion-stack space.
+- Retained the last-occurrence Binary Search pattern and correctly identified boundary movement when a target is found.
+- Tested and debugged the new recursion implementations successfully.
 
 ---
 
