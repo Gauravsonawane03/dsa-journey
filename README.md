@@ -11,11 +11,17 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 DSA
 
 ├── 01_Arrays
+
 ├── 02_Linked_List
+
 ├── 03_Recursion
+
 ├── HackerRank
+
 ├── LeetCode
+
 ├── README.md
+
 └── .gitignore
 
 ---
@@ -23,6 +29,7 @@ DSA
 ## Progress
 
 ### Arrays & Common Patterns
+
 - Time & Space Complexity
 - Array Fundamentals
 - Searching
@@ -40,6 +47,7 @@ DSA
 - Longest Substring Without Repeating Characters
 
 ### Binary Search
+
 - Standard Binary Search
 - Search Insert Position — LeetCode #35
 - First and Last Position — LeetCode #34
@@ -52,6 +60,7 @@ DSA
 - O(log N) Time and O(1) Auxiliary Space
 
 ### Linked Lists
+
 - Linked List Fundamentals and Use Cases
 - Node Structure and Pointers
 - Singly Linked Lists
@@ -71,6 +80,7 @@ DSA
 - Linked List Cycle — LeetCode #141
 
 ### Recursion
+
 - Recursive Function Fundamentals
 - Base Case and Recursive Case
 - Recursive Call Flow
@@ -95,6 +105,9 @@ DSA
 - Backtracking with `push_back()` / `pop_back()`
 - Existence vs Counting Recursion Patterns
 - Early Termination in Recursive Search
+- Combination-style Recursion
+- Combination Sum
+- Candidate Reuse in Recursive Search
 
 ---
 
@@ -109,7 +122,9 @@ Currently strengthening:
 - Recursive call flow and stack unwinding
 - Index-based recursion
 - Take/skip recursion
+- Combination-style recursion
 - Backtracking
+- Candidate reuse
 - Existence vs counting recursion
 - Early termination
 - Independent implementation
@@ -120,16 +135,19 @@ Currently strengthening:
 
 ## Recent Progress
 
-### September 17, 2026
-- Continued Recursion/Backtracking practice with branching recursion.
-- Reviewed recursive state, state transition, call-stack unwinding, and branching recursion.
-- Reviewed why `push_back()` / `pop_back()` is required when backtracking through choices.
-- Implemented checking whether a subsequence with sum K exists using take/skip recursion and early termination.
-- Implemented counting subsequences with sum K using recursive branch counting.
-- Reviewed the difference between existence (`take || skip`) and counting (`take + skip`) recursion patterns.
-- Analyzed `O(2^N)` time complexity and `O(N)` auxiliary recursion-stack space.
-- Retained the last-occurrence Binary Search pattern and correctly identified boundary movement when a target is found.
-- Tested and debugged the new recursion implementations successfully.
+### September 19, 2026
+
+- Reviewed recursion fundamentals including base cases, recursive state, state transitions, call-stack unwinding, and ordinary recursion vs backtracking.
+- Reviewed why take/skip recursion can produce exponential search spaces.
+- Practiced the role of `push_back()` and `pop_back()` when maintaining the current backtracking state.
+- Learned the Combination Sum recursion pattern with reusable candidates.
+- Independently implemented `03_Recursion/combination_sum.cpp` using take/skip branching.
+- Practiced candidate reuse by keeping the same index in the take branch and moving to `i + 1` in the skip branch.
+- Used `target == 0`, `target < 0`, and end-of-candidates conditions as stopping conditions.
+- Tested the implementation with targets `7` and `8` and verified the generated combinations.
+- Debugged the answer-printing logic and verified the final output.
+- Reviewed why the recursive search has exponential growth due to branching choices.
+- Deferred the unannounced Binary Search/Linked List retention problem and final understanding check to the next DSA session.
 
 ---
 
