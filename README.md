@@ -108,6 +108,11 @@ DSA
 - Combination-style Recursion
 - Combination Sum
 - Candidate Reuse in Recursive Search
+- Combination Sum II
+- No-Reuse Recursive Search
+- Same-Level Duplicate Handling
+- Sorting for Duplicate Skipping
+- Recursive Search with Loop-based Choices
 
 ---
 
@@ -124,7 +129,10 @@ Currently strengthening:
 - Take/skip recursion
 - Combination-style recursion
 - Backtracking
-- Candidate reuse
+- Candidate reuse vs no reuse
+- Same-level duplicate handling
+- Sorting for duplicate skipping
+- Loop-based recursive choices
 - Existence vs counting recursion
 - Early termination
 - Independent implementation
@@ -135,19 +143,25 @@ Currently strengthening:
 
 ## Recent Progress
 
-### September 19, 2026
+### September 21, 2026
 
-- Reviewed recursion fundamentals including base cases, recursive state, state transitions, call-stack unwinding, and ordinary recursion vs backtracking.
-- Reviewed why take/skip recursion can produce exponential search spaces.
-- Practiced the role of `push_back()` and `pop_back()` when maintaining the current backtracking state.
-- Learned the Combination Sum recursion pattern with reusable candidates.
-- Independently implemented `03_Recursion/combination_sum.cpp` using take/skip branching.
-- Practiced candidate reuse by keeping the same index in the take branch and moving to `i + 1` in the skip branch.
-- Used `target == 0`, `target < 0`, and end-of-candidates conditions as stopping conditions.
-- Tested the implementation with targets `7` and `8` and verified the generated combinations.
-- Debugged the answer-printing logic and verified the final output.
-- Reviewed why the recursive search has exponential growth due to branching choices.
-- Deferred the unannounced Binary Search/Linked List retention problem and final understanding check to the next DSA session.
+- Completed the deferred Combination Sum retention check without reopening the previous implementation.
+- Reviewed recursive state, reusable take branches, skip branches, successful and unsuccessful base cases, backtracking, and branching complexity.
+- Manually traced the Combination Sum recursion and reinforced the `choose → explore → undo` pattern.
+- Progressed to Combination Sum II as the next recursion/backtracking concept.
+- Identified the key difference from Combination Sum: candidates can no longer be reused, so the recursive transition moves to `j + 1`.
+- Learned why candidates must be sorted to enable same-level duplicate detection and target pruning.
+- Implemented `03_Recursion/combination_sum_ii.cpp` independently using loop-based recursive choices.
+- Implemented same-level duplicate skipping using `j > start && candidates[j] == candidates[j - 1]`.
+- Implemented target pruning using sorted candidates.
+- Used `push_back()` / recursive call / `pop_back()` for backtracking.
+- Tested Combination Sum II with multiple inputs and verified that duplicate combinations are not produced.
+- Completed the deferred older-topic retention problem by independently recognizing and implementing First Occurrence Binary Search.
+- Tested the Binary Search implementation with duplicate values and correctly returned the first occurrence.
+- Corrected and reinforced Binary Search complexity as O(log N) time and O(1) auxiliary space.
+- Reviewed the differences between Combination Sum I and Combination Sum II, including candidate reuse, forward movement, and duplicate handling.
+- Completed the final understanding check for the new recursion/backtracking pattern.
+- Updated the README with the current progression.
 
 ---
 
