@@ -9,19 +9,12 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 ## Repository Structure
 
 DSA
-
 ├── 01_Arrays
-
 ├── 02_Linked_List
-
 ├── 03_Recursion
-
 ├── HackerRank
-
 ├── LeetCode
-
 ├── README.md
-
 └── .gitignore
 
 ---
@@ -78,6 +71,7 @@ DSA
 - Cycle Detection using `unordered_set`
 - Floyd's Cycle Detection using Slow and Fast Pointers
 - Linked List Cycle — LeetCode #141
+- Reverse Linked List — LeetCode #206
 
 ### Recursion
 
@@ -113,6 +107,9 @@ DSA
 - Same-Level Duplicate Handling
 - Sorting for Duplicate Skipping
 - Recursive Search with Loop-based Choices
+- Permutations
+- Used-array Backtracking
+- Decreasing Choice Space in Permutation Generation
 
 ---
 
@@ -133,35 +130,45 @@ Currently strengthening:
 - Same-level duplicate handling
 - Sorting for duplicate skipping
 - Loop-based recursive choices
+- Permutation generation
+- Used-state tracking
 - Existence vs counting recursion
 - Early termination
 - Independent implementation
 - Testing and debugging
 - Time and auxiliary space analysis
+- Retention of previously learned patterns
 
 ---
 
 ## Recent Progress
 
-### September 21, 2026
+### September 22, 2026
 
-- Completed the deferred Combination Sum retention check without reopening the previous implementation.
-- Reviewed recursive state, reusable take branches, skip branches, successful and unsuccessful base cases, backtracking, and branching complexity.
-- Manually traced the Combination Sum recursion and reinforced the `choose → explore → undo` pattern.
-- Progressed to Combination Sum II as the next recursion/backtracking concept.
-- Identified the key difference from Combination Sum: candidates can no longer be reused, so the recursive transition moves to `j + 1`.
-- Learned why candidates must be sorted to enable same-level duplicate detection and target pruning.
-- Implemented `03_Recursion/combination_sum_ii.cpp` independently using loop-based recursive choices.
-- Implemented same-level duplicate skipping using `j > start && candidates[j] == candidates[j - 1]`.
-- Implemented target pruning using sorted candidates.
-- Used `push_back()` / recursive call / `pop_back()` for backtracking.
-- Tested Combination Sum II with multiple inputs and verified that duplicate combinations are not produced.
-- Completed the deferred older-topic retention problem by independently recognizing and implementing First Occurrence Binary Search.
-- Tested the Binary Search implementation with duplicate values and correctly returned the first occurrence.
-- Corrected and reinforced Binary Search complexity as O(log N) time and O(1) auxiliary space.
-- Reviewed the differences between Combination Sum I and Combination Sum II, including candidate reuse, forward movement, and duplicate handling.
-- Completed the final understanding check for the new recursion/backtracking pattern.
-- Updated the README with the current progression.
+- Completed the Combination Sum II retention check without reopening the previous implementation.
+- Recalled the recursive state: `start`, `target`, and `current`, with the answers container storing results.
+- Reinforced why the recursive transition moves to `j + 1` after choosing an element because candidates cannot be reused.
+- Reinforced why sorting is required for same-level duplicate detection and safe target pruning.
+- Recalled same-level duplicate handling using `j > start && candidates[j] == candidates[j - 1]`.
+- Reinforced the distinction between preventing duplicate choices at the same recursion level and allowing valid repeated values across deeper recursion levels.
+- Corrected the complexity understanding for Combination Sum II from polynomial reasoning to exponential recursive search, with output size also contributing to total work.
+- Identified that Subset Sums would largely repeat previously demonstrated take/skip and subsequence recursion patterns, so it was not treated as a separate new concept.
+- Progressed instead to Permutations as a genuinely new backtracking pattern.
+- Learned how permutation generation differs from subsequence/combination recursion because every position can choose from the remaining unused elements.
+- Implemented `03_Recursion/permutations.cpp` independently using a `current` vector and `used` vector.
+- Reinforced the `choose → explore → undo` pattern through `push_back()` / recursive call / `pop_back()` and `used[i] = true` / recursive call / `used[i] = false`.
+- Tested permutation generation with `[1,2,3]` and verified all six permutations.
+- Corrected the complexity analysis for permutation generation to O(N × N!) time with O(N) auxiliary space, excluding the output storage.
+- Completed a retention explanation of the permutation state, base case, used tracking, backtracking, and decreasing choice space.
+- Progressed to Reverse Linked List — LeetCode #206.
+- Derived the iterative three-pointer reversal approach using `prev`, `current`, and `next`.
+- Reinforced why `current->next` must be saved before reversing the current link.
+- Explained why `prev` becomes the new head after all nodes have been processed.
+- Independently implemented the iterative solution for LeetCode #206.
+- Fixed implementation issues involving the LeetCode `ListNode` type and function/class closing braces.
+- Submitted the solution successfully with all 28 test cases passing.
+- Added `0206_reverse_linked_list.cpp` to the `LeetCode` directory.
+- Reinforced that the iterative reversal runs in O(N) time and uses O(1) auxiliary space.
 
 ---
 
