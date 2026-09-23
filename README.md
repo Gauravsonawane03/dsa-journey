@@ -9,12 +9,19 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 ## Repository Structure
 
 DSA
+
 ├── 01_Arrays
+
 ├── 02_Linked_List
+
 ├── 03_Recursion
+
 ├── HackerRank
+
 ├── LeetCode
+
 ├── README.md
+
 └── .gitignore
 
 ---
@@ -110,6 +117,10 @@ DSA
 - Permutations
 - Used-array Backtracking
 - Decreasing Choice Space in Permutation Generation
+- N-Queens
+- Constraint-based Backtracking
+- Board-based Backtracking
+- Column and Diagonal Safety Checking
 
 ---
 
@@ -132,6 +143,8 @@ Currently strengthening:
 - Loop-based recursive choices
 - Permutation generation
 - Used-state tracking
+- Constraint-based backtracking
+- Board-based backtracking
 - Existence vs counting recursion
 - Early termination
 - Independent implementation
@@ -143,32 +156,17 @@ Currently strengthening:
 
 ## Recent Progress
 
-### September 22, 2026
+### September 23, 2026
 
-- Completed the Combination Sum II retention check without reopening the previous implementation.
-- Recalled the recursive state: `start`, `target`, and `current`, with the answers container storing results.
-- Reinforced why the recursive transition moves to `j + 1` after choosing an element because candidates cannot be reused.
-- Reinforced why sorting is required for same-level duplicate detection and safe target pruning.
-- Recalled same-level duplicate handling using `j > start && candidates[j] == candidates[j - 1]`.
-- Reinforced the distinction between preventing duplicate choices at the same recursion level and allowing valid repeated values across deeper recursion levels.
-- Corrected the complexity understanding for Combination Sum II from polynomial reasoning to exponential recursive search, with output size also contributing to total work.
-- Identified that Subset Sums would largely repeat previously demonstrated take/skip and subsequence recursion patterns, so it was not treated as a separate new concept.
-- Progressed instead to Permutations as a genuinely new backtracking pattern.
-- Learned how permutation generation differs from subsequence/combination recursion because every position can choose from the remaining unused elements.
-- Implemented `03_Recursion/permutations.cpp` independently using a `current` vector and `used` vector.
-- Reinforced the `choose → explore → undo` pattern through `push_back()` / recursive call / `pop_back()` and `used[i] = true` / recursive call / `used[i] = false`.
-- Tested permutation generation with `[1,2,3]` and verified all six permutations.
-- Corrected the complexity analysis for permutation generation to O(N × N!) time with O(N) auxiliary space, excluding the output storage.
-- Completed a retention explanation of the permutation state, base case, used tracking, backtracking, and decreasing choice space.
-- Progressed to Reverse Linked List — LeetCode #206.
-- Derived the iterative three-pointer reversal approach using `prev`, `current`, and `next`.
-- Reinforced why `current->next` must be saved before reversing the current link.
-- Explained why `prev` becomes the new head after all nodes have been processed.
-- Independently implemented the iterative solution for LeetCode #206.
-- Fixed implementation issues involving the LeetCode `ListNode` type and function/class closing braces.
-- Submitted the solution successfully with all 28 test cases passing.
-- Added `0206_reverse_linked_list.cpp` to the `LeetCode` directory.
-- Reinforced that the iterative reversal runs in O(N) time and uses O(1) auxiliary space.
+- Completed Permutations retention by recalling recursive state, `used[]` tracking, backtracking, base case, N! permutations, and O(N × N!) time.
+- Progressed to N-Queens as the next genuinely new recursion/backtracking pattern.
+- Learned constraint-based backtracking with row-by-row queen placement.
+- Implemented `03_Recursion/n_queens.cpp` using column and diagonal safety checks with choose → recurse → undo.
+- Tested N-Queens for N = 1, 2, 3, and 4 and verified the expected solutions.
+- Applied the pattern to LeetCode #51 — N-Queens and independently implemented the solution.
+- Submitted successfully with all 9 test cases passing.
+- Added `0051_n_queens.cpp` to the `LeetCode` directory.
+- Analyzed the implementation as approximately O(N × N!) time and O(N²) auxiliary space excluding output storage.
 
 ---
 
