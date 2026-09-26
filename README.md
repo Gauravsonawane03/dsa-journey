@@ -11,116 +11,12 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 DSA
 
 ├── 01_Arrays
-
 ├── 02_Linked_List
-
 ├── 03_Recursion
-
 ├── HackerRank
-
 ├── LeetCode
-
 ├── README.md
-
 └── .gitignore
-
----
-
-## Progress
-
-### Arrays & Common Patterns
-
-- Time & Space Complexity
-- Array Fundamentals
-- Searching
-- Two Pointers
-- Sliding Window
-- Hashing & Frequency Counting
-- Prefix Sum
-- Prefix Sum + Hash Map
-- Range Sum Queries
-- Subarray Sum Patterns
-- Common Array Manipulation Patterns
-- Pattern Recognition & Approach Selection
-- Second Largest Element
-- Remove Duplicates from Sorted Array
-- Longest Substring Without Repeating Characters
-
-### Binary Search
-
-- Standard Binary Search
-- Search Insert Position — LeetCode #35
-- First and Last Position — LeetCode #34
-- Search in Rotated Sorted Array — LeetCode #33
-- First Occurrence using Binary Search
-- Last Occurrence using Binary Search
-- Boundary Reasoning
-- Search-space Reduction
-- Sorted-half Identification
-- O(log N) Time and O(1) Auxiliary Space
-
-### Linked Lists
-
-- Linked List Fundamentals and Use Cases
-- Node Structure and Pointers
-- Singly Linked Lists
-- Traversal
-- Insertion at Beginning, Middle, and End
-- Deletion at Beginning, Middle, and End
-- Arrays vs Linked Lists
-- Basic Singly Linked List Implementation
-- Node Deletion
-- Linked List Reversal
-- Three-Pointer Reversal Technique
-- Node Searching
-- Finding the Middle using Slow and Fast Pointers
-- Counting Nodes
-- Cycle Detection using `unordered_set`
-- Floyd's Cycle Detection using Slow and Fast Pointers
-- Linked List Cycle — LeetCode #141
-- Reverse Linked List — LeetCode #206
-
-### Recursion
-
-- Recursive Function Fundamentals
-- Base Case and Recursive Case
-- Recursive Call Flow
-- Stack Unwinding
-- Descending Recursion
-- Ascending Recursion
-- Backtracking through Recursive Calls
-- Printing 1 to N using Backtracking
-- Printing N to 1 using Recursion
-- Sum of First N Numbers
-- Counting Digits
-- Reversing a String
-- Reversing an Array
-- Palindrome Checking
-- Sum of Array Elements
-- Index-based Recursive Problem Solving
-- Take/Skip Recursion
-- Generating Subsequences
-- Subsequences with Sum K
-- Checking Whether a Subsequence with Sum K Exists
-- Counting Subsequences with Sum K
-- Backtracking with `push_back()` / `pop_back()`
-- Existence vs Counting Recursion Patterns
-- Early Termination in Recursive Search
-- Combination-style Recursion
-- Combination Sum
-- Candidate Reuse in Recursive Search
-- Combination Sum II
-- No-Reuse Recursive Search
-- Same-Level Duplicate Handling
-- Sorting for Duplicate Skipping
-- Recursive Search with Loop-based Choices
-- Permutations
-- Used-array Backtracking
-- Decreasing Choice Space in Permutation Generation
-- N-Queens
-- Constraint-based Backtracking
-- Board-based Backtracking
-- Column and Diagonal Safety Checking
 
 ---
 
@@ -132,41 +28,53 @@ Currently strengthening:
 
 - Recursive problem decomposition
 - Base-case reasoning
-- Recursive call flow and stack unwinding
-- Index-based recursion
 - Take/skip recursion
-- Combination-style recursion
-- Backtracking
-- Candidate reuse vs no reuse
-- Same-level duplicate handling
-- Sorting for duplicate skipping
-- Loop-based recursive choices
-- Permutation generation
-- Used-state tracking
-- Constraint-based backtracking
-- Board-based backtracking
-- Existence vs counting recursion
-- Early termination
+- Backtracking and undo
+- Path/state tracking
+- Visited-state management
 - Independent implementation
+- Pattern recognition
+- Retention of older DSA patterns
 - Testing and debugging
 - Time and auxiliary space analysis
-- Retention of previously learned patterns
 
 ---
 
-## Recent Progress
+## Today's Progress — September 26, 2026
 
-### September 23, 2026
+### Rat in a Maze
 
-- Completed Permutations retention by recalling recursive state, `used[]` tracking, backtracking, base case, N! permutations, and O(N × N!) time.
-- Progressed to N-Queens as the next genuinely new recursion/backtracking pattern.
-- Learned constraint-based backtracking with row-by-row queen placement.
-- Implemented `03_Recursion/n_queens.cpp` using column and diagonal safety checks with choose → recurse → undo.
-- Tested N-Queens for N = 1, 2, 3, and 4 and verified the expected solutions.
-- Applied the pattern to LeetCode #51 — N-Queens and independently implemented the solution.
-- Submitted successfully with all 9 test cases passing.
-- Added `0051_n_queens.cpp` to the `LeetCode` directory.
-- Analyzed the implementation as approximately O(N × N!) time and O(N²) auxiliary space excluding output storage.
+- Implemented Rat in a Maze using recursive backtracking.
+- Used four-direction movement: Down, Up, Right, Left.
+- Applied boundary, open-cell, and visited-cell validation.
+- Used `push_back()` / `pop_back()` to maintain the current path.
+- Marked cells before recursion and unmarked them during backtracking.
+- Handled blocked starting cells and tested the implementation.
+- Analyzed recursive search complexity and auxiliary space.
+
+### LeetCode #78 — Subsets
+
+- Recognized the take/skip recursion pattern.
+- Implemented subset generation using recursive choices and backtracking.
+- Tested successfully on LeetCode.
+- Added the solution to `LeetCode`.
+
+### LeetCode #153 — Find Minimum in Rotated Sorted Array
+
+- Identified the binary-search pattern independently.
+- Used comparison with `nums[right]` to reduce the search space.
+- Implemented `O(log N)` time and `O(1)` auxiliary space.
+- Accepted with all test cases passing.
+- Added the solution to `LeetCode`.
+
+### LeetCode #560 — Subarray Sum Equals K
+
+- Identified prefix sum + hashing independently.
+- Used prefix-sum frequencies to count all valid subarrays.
+- Applied `freq[0] = 1` to handle subarrays beginning at index `0`.
+- Implemented `O(N)` average time and `O(N)` space.
+- Accepted with all test cases passing.
+- Added the solution to `LeetCode`.
 
 ---
 
