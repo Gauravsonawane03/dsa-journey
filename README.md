@@ -11,18 +11,24 @@ The goal is to develop strong algorithmic thinking, recognize reusable patterns,
 DSA
 
 ├── 01_Arrays
+
 ├── 02_Linked_List
+
 ├── 03_Recursion
+
 ├── HackerRank
+
 ├── LeetCode
+
 ├── README.md
+
 └── .gitignore
 
 ---
 
 ## Current Focus
 
-**Recursion & Backtracking**
+**Recursion, Backtracking & Dynamic Programming**
 
 Currently strengthening:
 
@@ -32,47 +38,53 @@ Currently strengthening:
 - Backtracking and undo
 - Path/state tracking
 - Visited-state management
-- Independent implementation
+- Memoization
+- Repeated-subproblem recognition
 - Pattern recognition
+- Independent implementation
 - Retention of older DSA patterns
 - Testing and debugging
 - Time and auxiliary space analysis
 
 ---
 
-## Today's Progress — September 26, 2026
+## Today's Progress — September 27, 2026
 
-### Rat in a Maze
+### LeetCode #974 — Subarray Sums Divisible by K
 
-- Implemented Rat in a Maze using recursive backtracking.
-- Used four-direction movement: Down, Up, Right, Left.
-- Applied boundary, open-cell, and visited-cell validation.
-- Used `push_back()` / `pop_back()` to maintain the current path.
-- Marked cells before recursion and unmarked them during backtracking.
-- Handled blocked starting cells and tested the implementation.
-- Analyzed recursive search complexity and auxiliary space.
-
-### LeetCode #78 — Subsets
-
-- Recognized the take/skip recursion pattern.
-- Implemented subset generation using recursive choices and backtracking.
-- Tested successfully on LeetCode.
-- Added the solution to `LeetCode`.
-
-### LeetCode #153 — Find Minimum in Rotated Sorted Array
-
-- Identified the binary-search pattern independently.
-- Used comparison with `nums[right]` to reduce the search space.
-- Implemented `O(log N)` time and `O(1)` auxiliary space.
+- Identified the prefix-sum remainder pattern.
+- Used prefix-sum remainder frequencies to count valid subarrays.
+- Applied `freq[0] = 1` to handle subarrays beginning at index `0`.
+- Handled negative remainders using modulo normalization.
+- Implemented `O(N)` average time and `O(N)` space.
 - Accepted with all test cases passing.
 - Added the solution to `LeetCode`.
 
-### LeetCode #560 — Subarray Sum Equals K
+### LeetCode #11 — Container With Most Water
 
-- Identified prefix sum + hashing independently.
-- Used prefix-sum frequencies to count all valid subarrays.
-- Applied `freq[0] = 1` to handle subarrays beginning at index `0`.
-- Implemented `O(N)` average time and `O(N)` space.
+- Identified the two-pointer pattern independently.
+- Used the shorter-height pointer movement rule.
+- Calculated container area using width and the limiting height.
+- Implemented `O(N)` time and `O(1)` auxiliary space.
+- Debugged and tested the implementation successfully.
+- Accepted with all test cases passing.
+- Added the solution to `LeetCode`.
+
+### New Pattern — Memoization / Dynamic Programming
+
+- Derived the recurrence for the Climbing Stairs problem.
+- Identified repeated subproblems in the recursive solution.
+- Introduced memoization by storing previously calculated results.
+- Understood `dp[i]` as the stored result for a subproblem.
+- Analyzed the optimized solution as `O(N)` time and `O(N)` auxiliary space.
+- Current capability: understood and implemented with guidance; further independent application is required for retention.
+
+### LeetCode #70 — Climbing Stairs
+
+- Implemented Climbing Stairs using recursive memoization.
+- Used a separate recursive helper with a shared `dp` array.
+- Applied base cases and memoization checks.
+- Tested successfully on LeetCode.
 - Accepted with all test cases passing.
 - Added the solution to `LeetCode`.
 
