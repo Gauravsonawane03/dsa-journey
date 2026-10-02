@@ -32,7 +32,6 @@ Currently strengthening:
 - Take/skip recursion
 - Backtracking and undo
 - Path/state tracking
-- Visited-state management
 - Memoization
 - Tabulation
 - DP state definition
@@ -40,19 +39,77 @@ Currently strengthening:
 - Repeated-subproblem recognition
 - Pattern recognition
 - Independent implementation
-- Retention of older DSA patterns
 - Mixed/unannounced problem solving
+- Older-pattern retention
 - Testing and debugging
-- Time and auxiliary space analysis
+- Time and auxiliary-space analysis
 
 ---
 
-## Today's Progress — October 1, 2026
+## Today's Progress — October 2, 2026
+
+### Dynamic Programming — LeetCode #746
+
+- Solved **Min Cost Climbing Stairs** as a fresh DP problem.
+- Initially confused the state with a counting problem; corrected it through reasoning.
+- Defined `dp[i]` as the minimum cost required to reach step `i`.
+- Derived the two choices: reach from `i-1` or `i-2`.
+- Derived:
+  `dp[i] = min(dp[i-1] + cost[i], dp[i-2] + cost[i])`
+- Identified the final transition as `min(dp[n-1], dp[n-2])` because the top itself has no cost.
+- Implemented using tabulation.
+- Debugged a missing `n` declaration and an incorrect `dp[n]` index inside the loop.
+- Tested successfully.
+- Complexity: `O(N)` time and `O(N)` auxiliary space.
+- Current capability: **APPLIED** with targeted guidance and debugging.
+
+### Mixed / Unannounced Pattern Practice
+
+- Practiced binary search without being given the pattern.
+- Correctly recognized the sorted-array binary-search structure and stated the boundary updates and `O(log N)` / `O(1)` complexity.
+- Existing `LeetCode/0704_binary_search.cpp` was retained; no duplicate file created.
+
+### Prefix Sum + Hashmap Retention
+
+- Recalled the core idea behind **LeetCode #560 — Subarray Sum Equals K**.
+- Recalled that the hashmap stores `prefix sum → frequency`.
+- Recalled that `currentPrefix - k` identifies the required previous prefix sum.
+- Demonstrated why frequencies are necessary when the same prefix sum occurs multiple times.
+- Applied the reasoning to a concrete example.
+
+### Sliding Window Retention
+
+- Tested whether sliding window is valid for exact-sum subarray problems.
+- Correctly identified that standard exact-sum sliding window relies on **non-negative values**, not sortedness.
+- Practiced maintaining `left`, `right`, and `sum`.
+- Expanded while the sum was below the target and shrank while it was above the target.
+- Identified valid windows during the process.
+- Current capability: **APPLIED with guidance**.
+
+### LeetCode #1 — Two Sum
+
+- Attempted an unannounced pattern-recognition problem.
+- Initially selected two pointers, then identified why the approach is not valid for an unsorted array.
+- Derived the hashmap approach:
+  `needed = target - nums[i]`
+- Recalled that the hashmap stores `value → index`.
+- Correctly identified the importance of checking the hashmap before inserting the current value.
+- Revisited the existing:
+  `LeetCode/0001_two_sum.cpp`
+- Also identified an older practice implementation:
+  `01_Arrays/practice/two_sum_hashing.cpp`
+- No duplicate file created.
+- Complexity: `O(N)` average time and `O(N)` space.
+- Current capability: **HINT-ASSISTED → APPLIED**.
+
+---
+
+## Previous Progress — October 1, 2026
 
 ### Dynamic Programming — Restart & Retention
 
 - Restarted Dynamic Programming from first principles after a short break.
-- Revisited the purpose of DP and the idea of solving overlapping subproblems once and reusing stored results.
+- Revisited overlapping subproblems and storing computed results.
 - Revisited the distinction between a DP state and the value stored in that state.
 - Revisited memoization as top-down recursion with stored results.
 - Learned tabulation as a bottom-up DP approach.
@@ -60,76 +117,53 @@ Currently strengthening:
 
 ### LeetCode #70 — Climbing Stairs
 
-- Revisited the Climbing Stairs recurrence.
+- Revisited the recurrence for 1-step and 2-step movement.
 - Identified `dp[n]` as the number of distinct ways to reach step `n`.
-- Revisited the relationship between the final move and the recurrence.
 - Revisited memoization and repeated-subproblem elimination.
-- Existing memoization practice remains in `03_Recursion/climbing_stairs_memoization.cpp` as recall work.
+- Existing `03_Recursion/climbing_stairs_memoization.cpp` remains as recall work.
 
 ### Dynamic Programming — House Robber
 
 - Solved House Robber as a fresh DP problem.
 - Defined the state as the maximum money obtainable from houses `0..i` without robbing adjacent houses.
-- Derived the two choices at each house: skip the current house or rob it.
-- Derived the recurrence:
-
+- Derived the choices to skip or rob the current house.
+- Derived:
   `dp[i] = max(dp[i-1], nums[i] + dp[i-2])`
-
-- Implemented the solution using recursive memoization from a blank file.
-- Tested empty input and multiple normal cases successfully.
-- Analyzed the solution as `O(N)` time and `O(N)` auxiliary space.
-- Current capability: implemented and applied with guided derivation; further independent retention is required.
+- Implemented recursive memoization from a blank file.
+- Tested empty input and multiple normal cases.
+- Complexity: `O(N)` time and `O(N)` auxiliary space.
+- Capability: **IMPLEMENTED → APPLIED** with guided derivation.
 
 ### Dynamic Programming — Climbing Stairs with 1, 2, or 3 Steps
 
-- Derived the recurrence for the number of ways to reach step `n` when 1, 2, or 3 steps can be taken.
-- Defined `dp[i]` as the number of distinct ways to reach step `i`.
+- Defined `dp[i]` as the number of ways to reach step `i`.
 - Derived:
-
   `dp[i] = dp[i-1] + dp[i-2] + dp[i-3]`
-
 - Learned and implemented bottom-up tabulation from a blank file.
-- Added base cases for `n = 0`, `n = 1`, and `n = 2`.
-- Tested multiple values including `0`, `1`, `2`, `3`, `4`, and `5`.
-- Implemented `O(N)` time and `O(N)` auxiliary space.
+- Tested `0`, `1`, `2`, `3`, `4`, and `5`.
+- Complexity: `O(N)` time and `O(N)` auxiliary space.
 - Added the solution to `04_DP`.
 
 ### LeetCode #121 — Best Time to Buy and Sell Stock
 
-- Initially analyzed the brute-force idea of checking possible buy/sell pairs.
-- Identified the optimized one-pass approach through guided reasoning.
-- Maintained the lowest price seen so far.
-- Calculated the profit possible if selling on the current day.
-- Updated maximum profit and then updated the minimum price for future days.
-- Implemented and tested the solution successfully.
-- Accepted with all test cases passing.
-- Implemented `O(N)` time and `O(1)` auxiliary space.
-- Added the solution to `LeetCode`.
-- Pattern recognition required guidance; implementation was completed independently after deriving the approach.
+- Started with brute-force buy/sell pairs.
+- Derived the optimized one-pass minimum-tracking approach.
+- Maintained the minimum price seen so far.
+- Calculated current profit and updated maximum profit.
+- Implemented and tested successfully.
+- Complexity: `O(N)` time and `O(1)` auxiliary space.
+- Pattern recognition required guidance.
+- Capability: **APPLIED**.
 
 ### LeetCode #169 — Majority Element
 
-- Started with a frequency-counting approach using a hash map.
-- Identified the brute-force/HashMap complexity as `O(N)` time and `O(N)` space.
-- Derived the cancellation idea from the majority-element guarantee.
-- Learned the candidate/count approach behind the Boyer–Moore Voting Algorithm.
-- Used:
-  - `count == 0` → select the current number as the candidate and reset count to `1`
-  - current number equals candidate → increment count
-  - current number differs from candidate → decrement count
-- Implemented the algorithm from a blank solution.
-- Debugged an incorrect `count == 0` case after the first submission.
+- Started with a frequency-counting approach.
+- Derived the cancellation idea behind Boyer–Moore Voting.
+- Implemented candidate/count logic.
+- Debugged an incorrect candidate-reset case.
 - Accepted with all test cases passing.
-- Final complexity: `O(N)` time and `O(1)` auxiliary space.
-- Added the solution to `LeetCode`.
-- Current capability: applied with guided derivation and debugging; independent retention requires later unannounced recall.
-
-### Mixed Pattern Practice
-
-- Continued unannounced problem practice after the main DP work.
-- #121 tested recognition of a one-pass minimum-tracking pattern.
-- #169 introduced a new cancellation/voting pattern.
-- Focus remained on reasoning, implementation, debugging, and complexity rather than maximizing problem count.
+- Complexity: `O(N)` time and `O(1)` auxiliary space.
+- Capability: **APPLIED**, with guided derivation and debugging.
 
 ---
 
@@ -139,10 +173,14 @@ Currently strengthening:
 
 **Current state: UNDERSTOOD → IMPLEMENTED → APPLIED**
 
-- Memoization has been implemented through Climbing Stairs and House Robber.
-- Tabulation has been implemented through the 1/2/3-step Climbing Stairs problem.
-- DP state and recurrence reasoning are becoming clearer.
-- Independent retention is still required through later fresh and unannounced problems.
+Demonstrated through:
+
+- Climbing Stairs
+- House Robber
+- 1/2/3-step Climbing Stairs
+- Min Cost Climbing Stairs
+
+Current weakness: **independent retention and recognition of fresh DP problems**.
 
 ### Pattern Recognition
 
@@ -156,16 +194,19 @@ Demonstrated patterns include:
 - Prefix sum + frequency map
 - Prefix sum + modulo frequency
 - Two pointers
+- Sliding window
 - One-pass minimum tracking
 - Boyer–Moore cancellation/voting
+- Hashmap-based complement lookup
 
-Pattern recognition is improving, but several newer patterns still require guided derivation before independent implementation.
+Pattern recognition is improving, but newer patterns may still require hints before independent implementation.
 
 ### Independent Problem Solving
 
-- Successfully implemented several problems independently after understanding the underlying approach.
-- Mixed/unannounced practice is being used to test transfer rather than relying only on topic-labelled problems.
-- Current focus is gradually increasing independent recognition and reducing reliance on guidance.
+- Several problems have been implemented independently after deriving the approach.
+- Mixed and unannounced problems are being used to test transfer rather than relying only on topic-labelled questions.
+- Current priority is reducing guidance and increasing independent pattern recognition.
+- Capability is being recorded based on demonstrated performance rather than exposure or explanation alone.
 
 ---
 
@@ -184,7 +225,7 @@ Pattern recognition is improving, but several newer patterns still require guide
 11. Record demonstrated capability
 12. Commit the work
 
-The focus is on demonstrated understanding, independent implementation, pattern recognition, debugging, and retention rather than simply increasing the number of problems solved.
+The focus is on understanding, independent implementation, pattern recognition, debugging, and retention rather than maximizing problem count.
 
 ---
 
