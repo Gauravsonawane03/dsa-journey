@@ -46,7 +46,57 @@ Currently strengthening:
 
 ---
 
-## Today's Progress — October 2, 2026
+## Today's Progress — October 3, 2026
+
+### Dynamic Programming — LeetCode #62
+
+- Solved **Unique Paths** as a fresh DP problem.
+- Learned the **2D/Grid DP** pattern.
+- Defined `dp[i][j]` as the number of unique paths to reach cell `(i, j)`.
+- Derived:
+  `dp[i][j] = dp[i-1][j] + dp[i][j-1]`
+- Identified the first row and first column as base cases with one possible path.
+- Implemented the solution using a 2D DP table.
+- Debugged incorrect `vector<vector<int>>` initialization.
+- Added the solution to `LeetCode/0062_unique_paths.cpp`.
+- Complexity: `O(m × n)` time and `O(m × n)` auxiliary space.
+- Current capability: **APPLIED** with guided derivation and debugging.
+
+### LeetCode #300 — Longest Increasing Subsequence
+
+- Solved **Longest Increasing Subsequence** as an unannounced Medium problem.
+- Clarified the difference between a subsequence and a subarray.
+- Recognized the DP formulation through state reasoning.
+- Defined `dp[i]` as the length of the longest increasing subsequence ending at index `i`.
+- Initialized every state to `1` because every individual element forms a subsequence of length `1`.
+- Derived:
+  `if nums[j] < nums[i], dp[i] = max(dp[i], dp[j] + 1)`
+- Used earlier indices `j < i` to extend increasing subsequences.
+- Returned the maximum value across all DP states.
+- Implemented the `O(N²)` DP solution from blank.
+- Debugged DP-vector initialization and loop boundaries.
+- Added the solution to `LeetCode/0300_longest_increasing_subsequence.cpp`.
+- Complexity: `O(N²)` time and `O(N)` auxiliary space.
+- Current capability: **APPLIED** with guided derivation and debugging.
+
+### LeetCode #525 — Contiguous Array
+
+- Solved **Contiguous Array** as an older-topic retention problem.
+- Recognized the previously learned **prefix sum + hashmap** pattern without being given the pattern.
+- Converted `0 → -1` and `1 → +1` to represent the balance between zeros and ones.
+- Used `balance → first index` in an `unordered_map`.
+- Initialized `seen[0] = -1` to handle subarrays beginning at index `0`.
+- Recognized that a repeated balance means the elements between the two indices have equal numbers of `0`s and `1`s.
+- Preserved the earliest occurrence of each balance to maximize subarray length.
+- Avoided modifying the input array and updated the balance directly.
+- Tested the solution successfully.
+- Added the solution to `LeetCode/0525_contiguous_array.cpp`.
+- Complexity: `O(N)` average time and `O(N)` space.
+- Current capability: **APPLIED**, with hint-assisted recognition.
+
+---
+
+## Previous Progress — October 2, 2026
 
 ### Dynamic Programming — LeetCode #746
 
@@ -179,8 +229,12 @@ Demonstrated through:
 - House Robber
 - 1/2/3-step Climbing Stairs
 - Min Cost Climbing Stairs
+- Unique Paths
+- Longest Increasing Subsequence
 
 Current weakness: **independent retention and recognition of fresh DP problems**.
+
+A new **2D/Grid DP** pattern has now been introduced. Independent recall and implementation of multidimensional DP representations will be developed separately.
 
 ### Pattern Recognition
 
@@ -198,6 +252,8 @@ Demonstrated patterns include:
 - One-pass minimum tracking
 - Boyer–Moore cancellation/voting
 - Hashmap-based complement lookup
+- 1D DP
+- 2D/Grid DP
 
 Pattern recognition is improving, but newer patterns may still require hints before independent implementation.
 
