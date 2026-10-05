@@ -23,7 +23,7 @@ DSA
 
 ## Current Focus
 
-**Dynamic Programming, 2D/Grid DP & Pattern Recognition**
+**Dynamic Programming, 2D DP, 0/1 Knapsack & Pattern Recognition**
 
 Currently working on:
 
@@ -37,90 +37,55 @@ Currently working on:
 - DP state definition
 - Recurrence derivation
 - Repeated-subproblem recognition
+- 1D DP
+- 2D/Grid DP
+- 0/1 Knapsack
+- Subset-sum style DP
 - Pattern recognition
 - Independent implementation
 - Mixed/unannounced problem solving
 - Older-pattern retention
-- 2D/Grid DP
 - 2D vector and matrix representation
 - Testing and debugging
 - Time and auxiliary-space analysis
 
 ---
 
-## Today's Progress — October 4, 2026
+## Today's Progress — October 5, 2026
 
-### 2D Vector / Matrix Practice
+### 0/1 Knapsack — 2D DP
 
-- Practiced `vector<vector<int>>` from a blank file.
-- Worked with rows, columns, and `dp[i][j]` indexing.
-- Created and initialized an `m × n` matrix.
-- Practiced nested row/column iteration.
-- Reinforced zero-based indexing:
-  - `i = 0 ... m-1`
-  - `j = 0 ... n-1`
-- Implemented a small 2D vector exercise before returning to DP.
+- Learned the 0/1 Knapsack pattern using 2D dynamic programming.
+- Defined DP state, base cases, and take/skip transitions.
+- Implemented:
 
-### LeetCode #62 — Unique Paths
+  `04_DP/knapsack_2d_dp.cpp`
 
-- Reconstructed **Unique Paths** from a blank file.
-- Defined `dp[i][j]` as the number of unique paths to reach cell `(i, j)`.
-- Identified the two previous cells:
-  - `(i-1, j)`
-  - `(i, j-1)`
-- Derived:
-
-  `dp[i][j] = dp[i-1][j] + dp[i][j-1]`
-
-- Implemented the first row and first column base cases.
-- Added the solution to:
-
-  `04_DP/unique_paths_2d_grid_dp.cpp`
-
-- Tested:
-  - `3 × 3 → 6`
-  - `3 × 2 → 3`
-  - `1 × 5 → 1`
+- Tested multiple capacity cases.
 - Complexity:
-  - Time: `O(m × n)`
-  - Space: `O(m × n)`
+  - Time: `O(N × Capacity)`
+  - Space: `O(N × Capacity)`
 
-### LeetCode #64 — Minimum Path Sum
+### LeetCode #416 — Partition Equal Subset Sum
 
-- Solved **Minimum Path Sum** as a fresh 2D/Grid DP problem.
-- Defined `dp[i][j]` as the minimum path sum required to reach cell `(i, j)`.
-- Derived:
+- Applied the 0/1 Knapsack pattern to subset-sum DP.
+- Converted equal partition into a target subset-sum problem.
+- Used boolean DP with take/skip transitions.
+- Implemented:
 
-  `dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]`
+  `LeetCode/0416_partition_equal_subset_sum.cpp`
 
-- Derived the starting cell, first-row, and first-column cases.
-- Implemented the solution in:
+### LeetCode #198 — House Robber
 
-  `LeetCode/0064_minimum_path_sum.cpp`
+- Practiced the 1D take/skip DP pattern.
+- Defined the maximum obtainable value for each prefix of houses.
+- Implemented:
 
-- Tested the standard example successfully.
-- Complexity:
-  - Time: `O(m × n)`
-  - Space: `O(m × n)`
+  `LeetCode/0198_house_robber.cpp`
 
-### LeetCode #238 — Product of Array Except Self
-
-- Solved **Product of Array Except Self** as an unannounced pattern problem.
-- Derived the prefix/suffix product approach.
-- Used two passes:
-  - Left → right for products of elements to the left.
-  - Right → left for products of elements to the right.
-- Avoided division.
-- Implemented the solution in:
-
-  `LeetCode/0238_product_of_array_except_self.cpp`
-
-- Tested:
-  - `[1,2,3,4] → [24,12,8,6]`
-  - `[-1,1,0,-3,3] → [0,0,9,0,0]`
 - Complexity:
   - Time: `O(N)`
-  - Extra space: `O(1)` excluding the output array.
+  - Space: `O(N)`
 
 ---
 
@@ -132,11 +97,14 @@ Current focus includes:
 
 - 1D DP
 - 2D/Grid DP
+- 0/1 Knapsack
+- Subset-sum DP
 - DP state definition
 - Recurrence derivation
 - Memoization
 - Tabulation
 - Path and cost optimization problems
+- Take/skip decision DP
 
 Recent DP problems include:
 
@@ -147,6 +115,8 @@ Recent DP problems include:
 - Unique Paths
 - Longest Increasing Subsequence
 - Minimum Path Sum
+- 0/1 Knapsack
+- Partition Equal Subset Sum
 
 ### Pattern Recognition
 
@@ -165,6 +135,8 @@ Practiced patterns include:
 - Prefix/Suffix Products
 - 1D DP
 - 2D/Grid DP
+- 0/1 Knapsack
+- Subset-Sum DP
 
 ### Problem-Solving Approach
 
