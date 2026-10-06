@@ -23,7 +23,7 @@ DSA
 
 ## Current Focus
 
-**Dynamic Programming, 2D DP, 0/1 Knapsack & Pattern Recognition**
+**Dynamic Programming, Knapsack Variations & Pattern Recognition**
 
 Currently working on:
 
@@ -41,51 +41,59 @@ Currently working on:
 - 2D/Grid DP
 - 0/1 Knapsack
 - Subset-sum style DP
+- Coin Change / unbounded-choice DP
 - Pattern recognition
 - Independent implementation
 - Mixed/unannounced problem solving
 - Older-pattern retention
-- 2D vector and matrix representation
+- Linked-list pointer techniques
 - Testing and debugging
 - Time and auxiliary-space analysis
 
 ---
 
-## Today's Progress — October 5, 2026
+## Today's Progress — October 6, 2026
 
-### 0/1 Knapsack — 2D DP
+### 0/1 Knapsack — Retrieval & Reinforcement
 
-- Learned the 0/1 Knapsack pattern using 2D dynamic programming.
-- Defined DP state, base cases, and take/skip transitions.
-- Implemented:
+- Reconstructed the 2D 0/1 Knapsack implementation from memory.
+- Reinforced DP state, base cases, and take/skip transitions.
+- Practiced the distinction between taking an item once and allowing repeated choices.
+- Implementation:
 
-  `04_DP/knapsack_2d_dp.cpp`
+`04_DP/knapsack_retrieval_check.cpp`
 
-- Tested multiple capacity cases.
 - Complexity:
   - Time: `O(N × Capacity)`
   - Space: `O(N × Capacity)`
 
-### LeetCode #416 — Partition Equal Subset Sum
+### LeetCode #322 — Coin Change
 
-- Applied the 0/1 Knapsack pattern to subset-sum DP.
-- Converted equal partition into a target subset-sum problem.
-- Used boolean DP with take/skip transitions.
+- Applied dynamic programming to an unbounded-choice problem.
+- Defined a 2D DP state based on available coins and target amount.
+- Derived take/skip transitions.
+- Distinguished unlimited coin usage from 0/1 Knapsack.
+- Used bottom-up tabulation.
 - Implemented:
 
-  `LeetCode/0416_partition_equal_subset_sum.cpp`
+`LeetCode/0322_coin_change.cpp`
 
-### LeetCode #198 — House Robber
+- Complexity:
+  - Time: `O(N × Amount)`
+  - Space: `O(N × Amount)`
 
-- Practiced the 1D take/skip DP pattern.
-- Defined the maximum obtainable value for each prefix of houses.
+### LeetCode #19 — Remove Nth Node From End of List
+
+- Applied linked-list pointer techniques.
+- Used a dummy node with fast and slow pointers.
+- Removed the target node in a single traversal.
 - Implemented:
 
-  `LeetCode/0198_house_robber.cpp`
+`LeetCode/0019_remove_nth_node_from_end_of_list.cpp`
 
 - Complexity:
   - Time: `O(N)`
-  - Space: `O(N)`
+  - Extra space: `O(1)`
 
 ---
 
@@ -99,6 +107,7 @@ Current focus includes:
 - 2D/Grid DP
 - 0/1 Knapsack
 - Subset-sum DP
+- Coin Change / unbounded-choice DP
 - DP state definition
 - Recurrence derivation
 - Memoization
@@ -117,6 +126,7 @@ Recent DP problems include:
 - Minimum Path Sum
 - 0/1 Knapsack
 - Partition Equal Subset Sum
+- Coin Change
 
 ### Pattern Recognition
 
@@ -137,6 +147,9 @@ Practiced patterns include:
 - 2D/Grid DP
 - 0/1 Knapsack
 - Subset-Sum DP
+- Unbounded-choice DP
+- Fast and Slow Pointers
+- Dummy Node Linked List Technique
 
 ### Problem-Solving Approach
 
