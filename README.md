@@ -54,30 +54,36 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 9, 2026
+## Today's Progress — October 10, 2026
 
-### LeetCode #347 — Top K Frequent Elements
+### LeetCode #128 — Longest Consecutive Sequence
 
-- Practiced frequency counting using a hash map.
-- Used frequency buckets to group elements by occurrence count.
-- Collected the most frequent elements by traversing buckets in descending frequency order.
+- Stored array elements in an unordered set for efficient membership checks.
+- Identified sequence starts by checking whether the preceding value exists.
+- Counted consecutive values from each sequence start.
+- Used set iteration to process distinct values.
 - Implemented:
 
-  `LeetCode/0347_top_k_frequent_elements.cpp`
-
-### LeetCode #931 — Minimum Falling Path Sum
-
-- Applied dynamic programming to a matrix path-minimization problem.
-- Considered vertical, upper-left, and upper-right predecessor cells.
-- Used in-place tabulation to store accumulated minimum path sums.
-- Evaluated the final row to find the minimum falling path sum.
-- Implemented:
-
-  `LeetCode/0931_minimum_falling_path_sum.cpp`
+  `LeetCode/0128_longest_consecutive_sequence.cpp`
 
 - Complexity:
-  - Time: `O(N²)`
-  - Auxiliary space: `O(1)` using in-place updates.
+  - Time: `O(N)` average
+  - Auxiliary space: `O(N)`
+
+### LeetCode #63 — Unique Paths II
+
+- Implemented a two-dimensional DP table to count paths through a grid containing obstacles.
+- Initialized the starting cell according to whether it was blocked.
+- Set obstacle cells to zero paths.
+- Calculated paths to each free cell using the values from above and the left.
+- Returned the path count at the destination.
+- Implemented:
+
+  `LeetCode/0063_unique_paths_ii.cpp`
+
+- Complexity:
+  - Time: `O(M × N)`
+  - Auxiliary space: `O(M × N)`
 
 ---
 
@@ -106,6 +112,7 @@ Recent DP problems include:
 - 1/2/3-step Climbing Stairs
 - Min Cost Climbing Stairs
 - Unique Paths
+- Unique Paths II
 - Longest Increasing Subsequence
 - Minimum Path Sum
 - 0/1 Knapsack
@@ -130,6 +137,7 @@ Practiced patterns include:
 - Prefix/suffix products
 - Frequency counting
 - Bucket-based grouping
+- Consecutive-sequence detection using hashing
 - 1D DP
 - 2D/Grid DP
 - 0/1 Knapsack
