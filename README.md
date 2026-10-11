@@ -49,41 +49,41 @@ Currently working on:
 - Retention of previously learned patterns
 - Linked-list pointer techniques
 - Hashing and frequency counting
+- String manipulation and grouping
 - Testing and debugging
 - Time and auxiliary-space analysis
 
 ---
 
-## Today's Progress — October 10, 2026
+## Today's Progress — October 11, 2026
 
-### LeetCode #128 — Longest Consecutive Sequence
+### LeetCode #724 — Find Pivot Index
 
-- Stored array elements in an unordered set for efficient membership checks.
-- Identified sequence starts by checking whether the preceding value exists.
-- Counted consecutive values from each sequence start.
-- Used set iteration to process distinct values.
+- Calculated the total sum of the array.
+- Maintained a running left sum to determine the right sum at each index.
+- Identified the pivot index where the left and right sums are equal.
 - Implemented:
 
-  `LeetCode/0128_longest_consecutive_sequence.cpp`
+  `LeetCode/0724_find_pivot_index.cpp`
 
 - Complexity:
-  - Time: `O(N)` average
-  - Auxiliary space: `O(N)`
+  - Time: `O(N)`
+  - Auxiliary space: `O(1)`
 
-### LeetCode #63 — Unique Paths II
+### LeetCode #49 — Group Anagrams
 
-- Implemented a two-dimensional DP table to count paths through a grid containing obstacles.
-- Initialized the starting cell according to whether it was blocked.
-- Set obstacle cells to zero paths.
-- Calculated paths to each free cell using the values from above and the left.
-- Returned the path count at the destination.
+- Grouped strings using a sorted version of each string as a canonical key.
+- Used `unordered_map<string, vector<string>>` to collect anagrams under the same key.
+- Practiced string manipulation, hashing, and grouping.
 - Implemented:
 
-  `LeetCode/0063_unique_paths_ii.cpp`
+  `LeetCode/0049_group_anagrams.cpp`
 
 - Complexity:
-  - Time: `O(M × N)`
-  - Auxiliary space: `O(M × N)`
+  - Time: `O(N × K log K)` average
+  - Auxiliary space: `O(N × K)`
+
+Here, `N` is the number of strings and `K` is the maximum string length.
 
 ---
 
@@ -138,6 +138,7 @@ Practiced patterns include:
 - Frequency counting
 - Bucket-based grouping
 - Consecutive-sequence detection using hashing
+- String grouping using canonical keys
 - 1D DP
 - 2D/Grid DP
 - 0/1 Knapsack
