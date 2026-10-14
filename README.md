@@ -24,55 +24,51 @@ DSA/
 
 ## Current Focus
 
-**Dynamic Programming, Knapsack Variations & Pattern Recognition**
+**Stacks, Queues, Pattern Recognition & Retention**
 
 Currently working on:
 
-- Recursive problem decomposition
-- Base-case reasoning
-- Take/skip recursion
-- Backtracking and undo
-- Path and state tracking
-- Memoization
-- Tabulation
-- DP state definition
-- Recurrence derivation
-- Repeated-subproblem recognition
-- 1D DP
-- 2D/Grid DP
-- 0/1 Knapsack
-- Subset-sum DP
-- Coin Change and unbounded-choice DP
-- Pattern recognition
+- Stack fundamentals and LIFO behaviour
+- Stack operations in C++
+- Queue fundamentals
+- Monotonic-stack reasoning
+- Resolving previous elements using current elements
+- Array and hashing patterns
+- Two pointers and sliding window
+- Prefix sums and frequency maps
+- Recursion and backtracking
+- Dynamic programming
 - Independent implementation
 - Mixed-problem solving
-- Retention of previously learned patterns
-- Linked-list pointer techniques
-- Hashing and frequency counting
-- String manipulation and grouping
-- Monotonic stack
 - Testing and debugging
 - Time and auxiliary-space analysis
+- Retention of previously learned patterns
 
 ---
 
-## Today's Progress — October 12, 2026
+## Today's Progress — October 14, 2026
 
-### LeetCode #739 — Daily Temperatures
+### LeetCode #15 — 3Sum
 
-- Implemented a brute-force approach using nested loops to find the next warmer day.
-- Optimized the approach using a monotonic stack of unresolved day indices.
-- Resolved earlier days when a warmer temperature was encountered.
-- Calculated waiting days using index differences.
-- Practiced stack operations, including `top()`, `pop()`, `push()`, and `empty()`.
-- Compared brute-force and optimized approaches.
-- Implemented:
+- Derived and implemented an optimized solution using sorting and two pointers.
+- Skipped duplicate fixed elements and duplicate pointer values to avoid repeated triplets.
+- Used the sum of three elements to determine pointer movements.
+- Submitted the solution successfully.
 
-  `LeetCode/0739_daily_temperatures.cpp`
+**Implementation:** `LeetCode/0015_3sum.cpp`
 
-- Complexity:
-  - Time: `O(N)`
-  - Auxiliary space: `O(N)`
+**Complexity:**
+- Time: `O(N²)`
+- Auxiliary space: `O(1)` excluding sorting implementation overhead and output storage.
+
+### Stack Fundamentals
+
+- Reviewed Last In, First Out (LIFO) behaviour.
+- Practiced `push()`, `pop()`, `top()`, `empty()`, and `size()`.
+- Connected stack operations to the Daily Temperatures problem.
+- Reinforced how a warmer temperature resolves an earlier unresolved day and how index differences calculate waiting time.
+
+Previously implemented: `LeetCode/0739_daily_temperatures.cpp`
 
 ---
 
@@ -80,7 +76,7 @@ Currently working on:
 
 ### Dynamic Programming
 
-Current focus includes:
+Current areas of practice include:
 
 - 1D DP
 - 2D/Grid DP
@@ -94,7 +90,7 @@ Current focus includes:
 - Path and cost optimization
 - Take/skip decision DP
 
-Recent DP problems include:
+Problems practised include:
 
 - Climbing Stairs
 - House Robber
@@ -111,13 +107,13 @@ Recent DP problems include:
 
 ### Pattern Recognition
 
-Practiced patterns include:
+Patterns practised include:
 
 - Recursion and backtracking
 - Take/skip decisions
 - Binary search
-- Prefix sum and frequency maps
-- Prefix sum with modulo frequency
+- Prefix sums and frequency maps
+- Prefix sums with modulo frequency
 - Two pointers
 - Sliding window
 - One-pass minimum tracking
@@ -137,22 +133,24 @@ Practiced patterns include:
 - Fast and slow pointers
 - Dummy-node linked-list technique
 
-### Problem-Solving Approach
+---
 
-1. Understand the problem.
-2. Identify the relevant pattern.
-3. Develop a brute-force approach.
+## Problem-Solving Approach
+
+1. Understand the problem and its constraints.
+2. Identify relevant concepts and patterns.
+3. Develop a brute-force baseline.
 4. Look for optimization opportunities.
-5. Attempt independently.
+5. Attempt the problem independently.
 6. Implement the solution.
-7. Test and debug.
-8. Analyze time and space complexity.
-9. Review edge cases.
-10. Revisit older patterns through unannounced practice.
+7. Test, debug, and examine edge cases.
+8. Analyze time and auxiliary-space complexity.
+9. Review the reasoning behind the solution.
+10. Revisit older patterns through practice.
 11. Improve independent problem-solving ability.
-12. Commit meaningful work.
+12. Commit meaningful work using Git.
 
-The focus is on understanding, implementation, pattern recognition, debugging, and retention rather than maximizing problem count.
+The focus is on understanding, implementation, debugging, pattern recognition, and retention rather than maximizing problem count.
 
 ---
 
