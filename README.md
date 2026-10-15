@@ -14,7 +14,7 @@ DSA/
 ├── 02_Linked_List/
 ├── 03_Recursion/
 ├── 04_DP/
-├── HackerRank/
+├── 05_Stacks_Queues/
 ├── LeetCode/
 ├── README.md
 └── .gitignore
@@ -29,8 +29,8 @@ DSA/
 Currently working on:
 
 - Stack fundamentals and LIFO behaviour
-- Stack operations in C++
-- Queue fundamentals
+- Queue fundamentals and FIFO behaviour
+- Stack and queue operations in C++
 - Monotonic-stack reasoning
 - Resolving previous elements using current elements
 - Array and hashing patterns
@@ -46,29 +46,64 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 14, 2026
+## Today's Progress — October 15, 2026
 
-### LeetCode #15 — 3Sum
+### LeetCode #20 — Valid Parentheses
 
-- Derived and implemented an optimized solution using sorting and two pointers.
-- Skipped duplicate fixed elements and duplicate pointer values to avoid repeated triplets.
-- Used the sum of three elements to determine pointer movements.
+- Applied stack fundamentals to bracket matching.
+- Used a stack to track opening brackets and match closing brackets in the correct order.
+- Handled mismatched brackets and invalid closing-bracket order.
 - Submitted the solution successfully.
 
-**Implementation:** `LeetCode/0015_3sum.cpp`
+**Implementation:** `LeetCode/0020_valid_parentheses.cpp`
 
 **Complexity:**
-- Time: `O(N²)`
-- Auxiliary space: `O(1)` excluding sorting implementation overhead and output storage.
+- Time: `O(N)`
+- Auxiliary space: `O(N)`
+
+### LeetCode #209 — Minimum Size Subarray Sum
+
+- Implemented a sliding-window solution using two pointers.
+- Expanded the window by moving the right pointer and maintaining the current sum.
+- Shrunk the window from the left while its sum remained greater than or equal to the target.
+- Tracked the minimum valid subarray length.
+- Submitted the solution successfully.
+
+**Pattern:** Sliding Window / Two Pointers
+
+**Complexity:**
+- Time: `O(N)`
+- Auxiliary space: `O(1)`
 
 ### Stack Fundamentals
 
-- Reviewed Last In, First Out (LIFO) behaviour.
-- Practiced `push()`, `pop()`, `top()`, `empty()`, and `size()`.
-- Connected stack operations to the Daily Temperatures problem.
-- Reinforced how a warmer temperature resolves an earlier unresolved day and how index differences calculate waiting time.
+- Implemented basic stack operations using C++ STL.
+- Practiced `push()`, `pop()`, `top()`, and `empty()`.
+- Observed how the top element changes after a pop operation.
 
-Previously implemented: `LeetCode/0739_daily_temperatures.cpp`
+**Implementation:** `05_Stacks_Queues/01_stack_operations.cpp`
+
+### Queue Fundamentals
+
+- Implemented basic queue operations using C++ STL.
+- Practiced `push()`, `pop()`, `front()`, `back()`, and `empty()`.
+- Verified FIFO behaviour through insertion and removal operations.
+
+**Implementation:** `05_Stacks_Queues/02_queue_operations.cpp`
+
+### LeetCode #739 — Daily Temperatures
+
+- Reconstructed the monotonic-stack solution from memory without opening the previous implementation.
+- Used indices to track unresolved temperatures.
+- Resolved previous days when a warmer temperature appeared.
+- Calculated waiting days using the difference between indices.
+- Compiled and ran the implementation successfully against a sample test case.
+
+**Implementation:** `05_Stacks_Queues/03_daily_temperatures.cpp`
+
+**Complexity:**
+- Time: `O(N)`
+- Auxiliary space: `O(N)`
 
 ---
 
@@ -160,7 +195,6 @@ The focus is on understanding, implementation, debugging, pattern recognition, a
 - VS Code
 - Git and GitHub
 - LeetCode
-- HackerRank
 - Striver A2Z
 
 ---
