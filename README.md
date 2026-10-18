@@ -30,6 +30,7 @@ Currently working on:
 
 - Stack fundamentals and LIFO behaviour
 - Queue fundamentals and FIFO behaviour
+- Implementing stacks using queues and queues using stacks
 - Stack and queue operations in C++
 - Monotonic-stack reasoning
 - Resolving previous elements using current elements
@@ -46,60 +47,51 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 15, 2026
+## Today's Progress — October 18, 2026
 
-### LeetCode #20 — Valid Parentheses
+### LeetCode #225 — Implement Stack using Queues
 
-- Applied stack fundamentals to bracket matching.
-- Used a stack to track opening brackets and match closing brackets in the correct order.
-- Handled mismatched brackets and invalid closing-bracket order.
+- Implemented a stack using a single queue.
+- Used queue rotation during insertion to place the newest element at the front.
+- Implemented `push()`, `pop()`, `top()`, and `empty()`.
+- Debugged a loop-boundary error during testing.
 - Submitted the solution successfully.
 
-**Implementation:** `LeetCode/0020_valid_parentheses.cpp`
+**Implementation:** `LeetCode/0225_implement_stack_using_queues.cpp`
 
 **Complexity:**
-- Time: `O(N)`
-- Auxiliary space: `O(N)`
+- `push()`: `O(N)`
+- `pop()`: `O(1)`
+- `top()`: `O(1)`
+- `empty()`: `O(1)`
 
-### LeetCode #209 — Minimum Size Subarray Sum
+### LeetCode #232 — Implement Queue using Stacks
 
-- Implemented a sliding-window solution using two pointers.
-- Expanded the window by moving the right pointer and maintaining the current sum.
-- Shrunk the window from the left while its sum remained greater than or equal to the target.
-- Tracked the minimum valid subarray length.
+- Implemented a queue using two stacks.
+- Used element transfers between the stacks to preserve FIFO behaviour.
+- Implemented `push()`, `pop()`, `peek()`, and `empty()`.
+- Tested queue ordering with multiple insertions and removals.
 - Submitted the solution successfully.
 
-**Pattern:** Sliding Window / Two Pointers
+**Implementation:** `LeetCode/0232_implement_queue_using_stacks.cpp`
 
 **Complexity:**
-- Time: `O(N)`
-- Auxiliary space: `O(1)`
+- `push()`: `O(N)`
+- `pop()`: `O(1)`
+- `peek()`: `O(1)`
+- `empty()`: `O(1)`
 
-### Stack Fundamentals
+### LeetCode #525 — Contiguous Array
 
-- Implemented basic stack operations using C++ STL.
-- Practiced `push()`, `pop()`, `top()`, and `empty()`.
-- Observed how the top element changes after a pop operation.
+- Recreated the solution and submitted it successfully.
+- Transformed `0` into `-1` and kept `1` as `+1`, reducing the problem to finding a zero-sum subarray.
+- Used prefix sums and a hash map to identify repeated prefix sums.
+- Preserved the earliest index for each prefix sum to maximize subarray length.
+- Tested balanced and unbalanced input cases.
 
-**Implementation:** `05_Stacks_Queues/01_stack_operations.cpp`
+**Implementation:** `LeetCode/0525_contiguous_array.cpp`
 
-### Queue Fundamentals
-
-- Implemented basic queue operations using C++ STL.
-- Practiced `push()`, `pop()`, `front()`, `back()`, and `empty()`.
-- Verified FIFO behaviour through insertion and removal operations.
-
-**Implementation:** `05_Stacks_Queues/02_queue_operations.cpp`
-
-### LeetCode #739 — Daily Temperatures
-
-- Reconstructed the monotonic-stack solution from memory without opening the previous implementation.
-- Used indices to track unresolved temperatures.
-- Resolved previous days when a warmer temperature appeared.
-- Calculated waiting days using the difference between indices.
-- Compiled and ran the implementation successfully against a sample test case.
-
-**Implementation:** `05_Stacks_Queues/03_daily_temperatures.cpp`
+**Pattern:** Prefix Sum + Hash Map
 
 **Complexity:**
 - Time: `O(N)`
@@ -160,6 +152,7 @@ Patterns practised include:
 - Consecutive-sequence detection using hashing
 - String grouping using canonical keys
 - Monotonic stack
+- Stack and queue transformations
 - 1D DP
 - 2D/Grid DP
 - 0/1 Knapsack
