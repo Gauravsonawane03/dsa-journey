@@ -47,55 +47,48 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 18, 2026
+## Today's Progress — October 21, 2026
 
-### LeetCode #225 — Implement Stack using Queues
+### LeetCode #155 — Min Stack
 
-- Implemented a stack using a single queue.
-- Used queue rotation during insertion to place the newest element at the front.
-- Implemented `push()`, `pop()`, `top()`, and `empty()`.
-- Debugged a loop-boundary error during testing.
-- Submitted the solution successfully.
+- Implemented a stack supporting `push()`, `pop()`, `top()`, and `getMin()`.
+- Stored each value alongside the minimum seen at that stack depth.
+- Preserved correct minimum tracking when elements are removed, including duplicate minimum values.
+- Debugged implementation issues and verified the solution through LeetCode.
 
-**Implementation:** `LeetCode/0225_implement_stack_using_queues.cpp`
-
-**Complexity:**
-- `push()`: `O(N)`
-- `pop()`: `O(1)`
-- `top()`: `O(1)`
-- `empty()`: `O(1)`
-
-### LeetCode #232 — Implement Queue using Stacks
-
-- Implemented a queue using two stacks.
-- Used element transfers between the stacks to preserve FIFO behaviour.
-- Implemented `push()`, `pop()`, `peek()`, and `empty()`.
-- Tested queue ordering with multiple insertions and removals.
-- Submitted the solution successfully.
-
-**Implementation:** `LeetCode/0232_implement_queue_using_stacks.cpp`
+**Implementation:** `LeetCode/0155_min_stack.cpp`
 
 **Complexity:**
-- `push()`: `O(N)`
-- `pop()`: `O(1)`
-- `peek()`: `O(1)`
-- `empty()`: `O(1)`
+- `push()`: O(1)
+- `pop()`: O(1)
+- `top()`: O(1)
+- `getMin()`: O(1)
+- Auxiliary space: O(N)
+
+### LeetCode #496 — Next Greater Element I
+
+- Implemented a monotonic-stack solution using right-to-left traversal.
+- Used a stack to discard elements that cannot be the next greater element.
+- Stored next-greater-element results in a hash map for efficient query lookup.
+- Constructed the answer in the order of `nums1`.
+- Submitted the solution successfully.
+
+**Implementation:** `LeetCode/0496_next_greater_element_i.cpp`
+
+**Pattern:** Monotonic Stack + Hash Map
+
+**Complexity:**
+- Time: O(N + M), where N and M are the lengths of `nums2` and `nums1`, respectively.
+- Auxiliary space: O(N)
 
 ### LeetCode #525 — Contiguous Array
 
-- Recreated the solution and submitted it successfully.
-- Transformed `0` into `-1` and kept `1` as `+1`, reducing the problem to finding a zero-sum subarray.
-- Used prefix sums and a hash map to identify repeated prefix sums.
-- Preserved the earliest index for each prefix sum to maximize subarray length.
-- Tested balanced and unbalanced input cases.
+- Previously practised the prefix-sum and hash-map solution.
+- No new implementation was completed for this problem during today's session.
 
 **Implementation:** `LeetCode/0525_contiguous_array.cpp`
 
 **Pattern:** Prefix Sum + Hash Map
-
-**Complexity:**
-- Time: `O(N)`
-- Auxiliary space: `O(N)`
 
 ---
 
