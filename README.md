@@ -34,6 +34,7 @@ Currently working on:
 - Stack and queue operations in C++
 - Monotonic-stack reasoning
 - Resolving previous elements using current elements
+- Circular-array traversal
 - Array and hashing patterns
 - Two pointers and sliding window
 - Prefix sums and frequency maps
@@ -47,48 +48,35 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 21, 2026
-
-### LeetCode #155 — Min Stack
-
-- Implemented a stack supporting `push()`, `pop()`, `top()`, and `getMin()`.
-- Stored each value alongside the minimum seen at that stack depth.
-- Preserved correct minimum tracking when elements are removed, including duplicate minimum values.
-- Debugged implementation issues and verified the solution through LeetCode.
-
-**Implementation:** `LeetCode/0155_min_stack.cpp`
-
-**Complexity:**
-- `push()`: O(1)
-- `pop()`: O(1)
-- `top()`: O(1)
-- `getMin()`: O(1)
-- Auxiliary space: O(N)
+## Today's Progress — October 22, 2026
 
 ### LeetCode #496 — Next Greater Element I
 
-- Implemented a monotonic-stack solution using right-to-left traversal.
+- Reconstructed the monotonic-stack solution as a retention check in the topic-based practice folder.
+- Used right-to-left traversal to find the next greater element for each value in `nums2`.
 - Used a stack to discard elements that cannot be the next greater element.
-- Stored next-greater-element results in a hash map for efficient query lookup.
-- Constructed the answer in the order of `nums1`.
-- Submitted the solution successfully.
+- Stored results in a hash map and constructed the answer in the order of `nums1`.
+- Tested the implementation locally.
 
-**Implementation:** `LeetCode/0496_next_greater_element_i.cpp`
+**Practice file:** `05_Stacks_Queues/04_next_greater_element_i_retention.cpp`
 
 **Pattern:** Monotonic Stack + Hash Map
 
+### LeetCode #503 — Next Greater Element II
+
+- Implemented a monotonic-stack solution for a circular array.
+- Traversed the array twice using modulo indexing to simulate circular traversal.
+- Removed elements from the stack that were smaller than or equal to the current element.
+- Stored answers only during the first pass and used `-1` when no greater element exists.
+- Submitted the solution successfully.
+
+**Implementation:** `LeetCode/0503_next_greater_element_ii.cpp`
+
+**Pattern:** Monotonic Stack + Circular Array
+
 **Complexity:**
-- Time: O(N + M), where N and M are the lengths of `nums2` and `nums1`, respectively.
-- Auxiliary space: O(N)
-
-### LeetCode #525 — Contiguous Array
-
-- Previously practised the prefix-sum and hash-map solution.
-- No new implementation was completed for this problem during today's session.
-
-**Implementation:** `LeetCode/0525_contiguous_array.cpp`
-
-**Pattern:** Prefix Sum + Hash Map
+- Time: `O(N)`
+- Auxiliary space: `O(N)`
 
 ---
 
