@@ -48,34 +48,38 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 22, 2026
-
-### LeetCode #496 — Next Greater Element I
-
-- Reconstructed the monotonic-stack solution as a retention check in the topic-based practice folder.
-- Used right-to-left traversal to find the next greater element for each value in `nums2`.
-- Used a stack to discard elements that cannot be the next greater element.
-- Stored results in a hash map and constructed the answer in the order of `nums1`.
-- Tested the implementation locally.
-
-**Practice file:** `05_Stacks_Queues/04_next_greater_element_i_retention.cpp`
-
-**Pattern:** Monotonic Stack + Hash Map
+## Today's Progress — October 23, 2026
 
 ### LeetCode #503 — Next Greater Element II
 
-- Implemented a monotonic-stack solution for a circular array.
-- Traversed the array twice using modulo indexing to simulate circular traversal.
-- Removed elements from the stack that were smaller than or equal to the current element.
-- Stored answers only during the first pass and used `-1` when no greater element exists.
-- Submitted the solution successfully.
+- Reconstructed the circular monotonic-stack solution from memory.
+- Used reverse traversal with modulo indexing to simulate circular traversal.
+- Removed elements smaller than or equal to the current element to maintain valid next-greater candidates.
+- Stored answers during the required traversal and used `-1` when no greater element exists.
+- Tested a single-element array, a decreasing array, and a wraparound case.
 
-**Implementation:** `LeetCode/0503_next_greater_element_ii.cpp`
+**Practice file:** `05_Stacks_Queues/05_next_greater_element_ii_retention.cpp`
 
 **Pattern:** Monotonic Stack + Circular Array
 
 **Complexity:**
 - Time: `O(N)`
+- Auxiliary space: `O(N)`
+
+### LeetCode #901 — Online Stock Span
+
+- Implemented the `StockSpanner` class using a monotonic stack of `(price, index)` pairs.
+- Removed previous prices less than or equal to the current price to calculate the consecutive span efficiently.
+- Used the index of the previous greater price to determine the current span.
+- Submitted the solution successfully; all 102 test cases passed.
+
+**Implementation:** `LeetCode/0901_online_stock_span.cpp`
+
+**Pattern:** Monotonic Stack + Previous Greater Element
+
+**Complexity:**
+- Amortized time per call: `O(1)`
+- Total time for `N` calls: `O(N)`
 - Auxiliary space: `O(N)`
 
 ---
