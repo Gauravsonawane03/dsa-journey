@@ -35,6 +35,7 @@ Currently working on:
 - Monotonic-stack reasoning
 - Resolving previous elements using current elements
 - Circular-array traversal
+- Stack-based simulation and collision handling
 - Array and hashing patterns
 - Two pointers and sliding window
 - Prefix sums and frequency maps
@@ -48,38 +49,42 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 23, 2026
-
-### LeetCode #503 — Next Greater Element II
-
-- Reconstructed the circular monotonic-stack solution from memory.
-- Used reverse traversal with modulo indexing to simulate circular traversal.
-- Removed elements smaller than or equal to the current element to maintain valid next-greater candidates.
-- Stored answers during the required traversal and used `-1` when no greater element exists.
-- Tested a single-element array, a decreasing array, and a wraparound case.
-
-**Practice file:** `05_Stacks_Queues/05_next_greater_element_ii_retention.cpp`
-
-**Pattern:** Monotonic Stack + Circular Array
-
-**Complexity:**
-- Time: `O(N)`
-- Auxiliary space: `O(N)`
+## Today's Progress — October 24, 2026
 
 ### LeetCode #901 — Online Stock Span
 
-- Implemented the `StockSpanner` class using a monotonic stack of `(price, index)` pairs.
-- Removed previous prices less than or equal to the current price to calculate the consecutive span efficiently.
-- Used the index of the previous greater price to determine the current span.
-- Submitted the solution successfully; all 102 test cases passed.
+- Reconstructed the `StockSpanner` implementation as a retention exercise.
+- Used a monotonic stack of `(price, index)` pairs.
+- Removed previous prices less than or equal to the current price to identify the previous greater price.
+- Calculated the span using the current index and the index of the previous greater price.
+- Tested the implementation locally.
 
-**Implementation:** `LeetCode/0901_online_stock_span.cpp`
+**Practice file:** `05_Stacks_Queues/06_online_stock_span.cpp`
+
+**LeetCode implementation:** `LeetCode/0901_online_stock_span.cpp`
 
 **Pattern:** Monotonic Stack + Previous Greater Element
 
 **Complexity:**
 - Amortized time per call: `O(1)`
 - Total time for `N` calls: `O(N)`
+- Auxiliary space: `O(N)`
+
+### LeetCode #735 — Asteroid Collision
+
+- Implemented a stack-based simulation to determine which asteroids survive collisions.
+- Maintained a stack containing only surviving asteroids in their original relative order.
+- Handled collisions between right-moving and left-moving asteroids.
+- Used repeated comparisons to handle multiple collisions caused by a single incoming asteroid.
+- Handled cases where the incoming asteroid is destroyed, destroys the stack's top, or destroys both asteroids when their magnitudes are equal.
+- Tested collision scenarios, including repeated collisions and an incoming asteroid that survives after destroying all asteroids in the stack.
+
+**Implementation:** `LeetCode/0735_asteroid_collision.cpp`
+
+**Pattern:** Stack Simulation + Conditional Repeated Collisions
+
+**Complexity:**
+- Time: `O(N)`
 - Auxiliary space: `O(N)`
 
 ---
@@ -138,6 +143,7 @@ Patterns practised include:
 - String grouping using canonical keys
 - Monotonic stack
 - Stack and queue transformations
+- Stack-based collision simulation
 - 1D DP
 - 2D/Grid DP
 - 0/1 Knapsack
