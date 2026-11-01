@@ -49,43 +49,48 @@ Currently working on:
 
 ---
 
-## Today's Progress — October 24, 2026
+## Today's Progress — November 1, 2026
 
-### LeetCode #901 — Online Stock Span
+### LeetCode #622 — Design Circular Queue
 
-- Reconstructed the `StockSpanner` implementation as a retention exercise.
-- Used a monotonic stack of `(price, index)` pairs.
-- Removed previous prices less than or equal to the current price to identify the previous greater price.
-- Calculated the span using the current index and the index of the previous greater price.
-- Tested the implementation locally.
+- Implemented a circular queue using a vector in C++.
+- Used front and rear indices to track the queue's elements.
+- Maintained the current element count and maximum capacity.
+- Implemented all required operations: `enQueue`, `deQueue`, `Front`, `Rear`, `isEmpty`, and `isFull`.
+- Used modulo-based index movement to support circular traversal and reuse freed positions.
+- Handled empty and full queue conditions, including resetting indices when the last element is removed.
 
-**Practice file:** `05_Stacks_Queues/06_online_stock_span.cpp`
+**LeetCode implementation:** `LeetCode/0622_design_circular_queue.cpp`
 
-**LeetCode implementation:** `LeetCode/0901_online_stock_span.cpp`
-
-**Pattern:** Monotonic Stack + Previous Greater Element
-
-**Complexity:**
-- Amortized time per call: `O(1)`
-- Total time for `N` calls: `O(N)`
-- Auxiliary space: `O(N)`
-
-### LeetCode #735 — Asteroid Collision
-
-- Implemented a stack-based simulation to determine which asteroids survive collisions.
-- Maintained a stack containing only surviving asteroids in their original relative order.
-- Handled collisions between right-moving and left-moving asteroids.
-- Used repeated comparisons to handle multiple collisions caused by a single incoming asteroid.
-- Handled cases where the incoming asteroid is destroyed, destroys the stack's top, or destroys both asteroids when their magnitudes are equal.
-- Tested collision scenarios, including repeated collisions and an incoming asteroid that survives after destroying all asteroids in the stack.
-
-**Implementation:** `LeetCode/0735_asteroid_collision.cpp`
-
-**Pattern:** Stack Simulation + Conditional Repeated Collisions
+**Pattern:** Circular Array + Queue Implementation
 
 **Complexity:**
-- Time: `O(N)`
+- Constructor: `O(k)`
+- Enqueue: `O(1)`
+- Dequeue: `O(1)`
+- Front and Rear: `O(1)`
+- isEmpty and isFull: `O(1)`
+- Auxiliary space: `O(k)`
+
+**Result:** Accepted — 59/59 test cases passed.
+
+### LeetCode #525 — Contiguous Array
+
+- Reconstructed the prefix-sum approach using the transformation `0 → -1` and `1 → +1`.
+- Used a running prefix sum to identify subarrays containing equal numbers of zeroes and ones.
+- Used an unordered map to store the earliest index of each prefix sum.
+- Identified balanced subarrays through repeated prefix sums.
+- Maintained the maximum subarray length using the difference between the current index and the earliest occurrence of the same prefix sum.
+
+**LeetCode implementation:** `LeetCode/0525_contiguous_array.cpp`
+
+**Pattern:** Prefix Sum + Hash Map + Earliest Index Tracking
+
+**Complexity:**
+- Time: `O(N)` expected
 - Auxiliary space: `O(N)`
+
+**Result:** Accepted — 566/566 test cases passed.
 
 ---
 
@@ -143,6 +148,7 @@ Patterns practised include:
 - String grouping using canonical keys
 - Monotonic stack
 - Stack and queue transformations
+- Circular queue implementation
 - Stack-based collision simulation
 - 1D DP
 - 2D/Grid DP
