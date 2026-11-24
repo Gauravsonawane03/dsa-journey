@@ -13,16 +13,20 @@ struct TreeNode
         right = nullptr;
     }
 };
-void preorder(TreeNode* root) {
-    if (root == nullptr) {
-    return;
-}
+void preorder(TreeNode *root)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
     cout << root->val << " ";
     preorder(root->left);
     preorder(root->right);
 }
-void inorder(TreeNode* root) {
-    if (root == nullptr) {
+void inorder(TreeNode *root)
+{
+    if (root == nullptr)
+    {
         return;
     }
 
@@ -30,14 +34,39 @@ void inorder(TreeNode* root) {
     cout << root->val << " ";
     inorder(root->right);
 }
-void postorder(TreeNode* root) {
-    if (root == nullptr) {
+void postorder(TreeNode *root)
+{
+    if (root == nullptr)
+    {
         return;
     }
 
     postorder(root->left);
     postorder(root->right);
     cout << root->val << " ";
+}
+void levelOrder(TreeNode *root)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
+    queue<TreeNode *> q;
+    q.push(root);
+    while (!q.empty())
+    {
+        TreeNode *current = q.front();
+        q.pop();
+        cout << current->val << " ";
+        if (current->left != nullptr)
+        {
+            q.push(current->left);
+        }
+        if (current->right != nullptr)
+        {
+            q.push(current->right);
+        }
+    }
 }
 int main()
 {
@@ -57,9 +86,12 @@ int main()
     node2->left = node4;
     node2->right = node5;
     preorder(root);
-    cout<<endl;
+    cout << endl;
     inorder(root);
-    cout<<endl;
+    cout << endl;
     postorder(root);
+    cout<<endl;
+    levelOrder(root);
+    cout << endl;
     return 0;
 }

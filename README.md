@@ -31,100 +31,38 @@ Currently working on:
 
 - Binary tree fundamentals
 - TreeNode representation using pointers
-- Root, parent, child and leaf relationships
-- Depth vs height
-- Subtrees
-- Balanced and unbalanced trees
-- Degenerate/skewed trees
 - Recursive tree traversal
-- Preorder traversal
-- Inorder traversal
-- Postorder traversal
-- Base cases and recursion termination
+- Preorder, inorder & postorder traversal
+- Level order traversal using BFS
+- Queue-based tree traversal
+- Recursion base cases
 - Time and auxiliary-space analysis
 - Independent implementation
 - Pattern recognition
-- Mixed-problem solving
 - Testing and debugging
 - Retention of previously learned patterns
 
 ---
 
-## Today's Progress — November 23, 2026
+## Recent Progress — November 24, 2026
 
-### Binary Trees — Basic Structure & Traversals
+### Binary Trees
 
-- Rebuilt a basic binary tree in C++ using a `TreeNode` structure.
-- Used pointers to connect nodes through `left` and `right` child references.
-- Created and traversed the following tree:
+- Independently reconstructed a binary tree using `TreeNode` and pointers.
+- Reimplemented preorder, inorder, and postorder traversal from memory.
+- Verified traversal outputs on a custom tree.
+- Implemented Level Order Traversal using a queue and BFS.
+- Tested level-order traversal successfully.
+- Analyzed traversal time and auxiliary-space complexity.
 
-```text
-        1
-       / \
-      2   3
-     / \
-    4   5
-```
-
-### Preorder Traversal
-
-- Implemented recursive preorder traversal.
-- Processing order:
+### Traversal Patterns
 
 ```text
-Root → Left → Right
+Preorder:   Root → Left → Right
+Inorder:    Left → Root → Right
+Postorder:  Left → Right → Root
+Level Order: Level by Level using a Queue
 ```
-
-- Output:
-
-```text
-1 2 4 5 3
-```
-
-- Used `nullptr` as the base case for recursion.
-
-### Inorder Traversal
-
-- Implemented recursive inorder traversal.
-- Processing order:
-
-```text
-Left → Root → Right
-```
-
-- Output:
-
-```text
-4 2 5 1 3
-```
-
-### Postorder Traversal
-
-- Implemented recursive postorder traversal.
-- Processing order:
-
-```text
-Left → Right → Root
-```
-
-- Output:
-
-```text
-4 5 2 3 1
-```
-
-### Complexity
-
-For all three recursive traversals:
-
-- Time: `O(N)`
-- Auxiliary space: `O(H)`
-
-where `N` is the number of nodes and `H` is the height of the tree.
-
-### Practice
-
-Applied preorder and inorder traversal patterns to a fresh binary tree variation to verify understanding beyond the original example.
 
 ---
 
@@ -132,15 +70,11 @@ Applied preorder and inorder traversal patterns to a fresh binary tree variation
 
 ### Dynamic Programming
 
-Current areas of practice include:
-
 - 1D DP
 - 2D/Grid DP
 - 0/1 Knapsack
 - Subset-sum DP
-- Coin Change and unbounded-choice DP
-- DP state definition
-- Recurrence derivation
+- Unbounded-choice DP
 - Memoization
 - Tabulation
 - Path and cost optimization
@@ -150,7 +84,6 @@ Problems practised include:
 
 - Climbing Stairs
 - House Robber
-- 1/2/3-step Climbing Stairs
 - Min Cost Climbing Stairs
 - Unique Paths
 - Unique Paths II
@@ -169,44 +102,39 @@ Patterns practised include:
 - Take/skip decisions
 - Binary search
 - Prefix sums and frequency maps
-- Prefix sums with modulo frequency
 - Two pointers
 - Sliding window
-- One-pass minimum tracking
 - Boyer–Moore voting
 - Hash-map complement lookup
 - Prefix/suffix products
 - Frequency counting
 - Bucket-based grouping
-- Consecutive-sequence detection using hashing
+- Hashing-based sequence detection
 - String grouping using canonical keys
 - Monotonic stack
 - Stack and queue transformations
-- Circular queue implementation
+- Circular queue
 - Stack-based collision simulation
-- 1D DP
-- 2D/Grid DP
-- 0/1 Knapsack
-- Subset-sum DP
-- Unbounded-choice DP
+- Dynamic programming
 - Fast and slow pointers
 - Dummy-node linked-list technique
 - Binary tree traversal
+- Level order / BFS
 
 ---
 
 ## Problem-Solving Approach
 
-1. Understand the problem and its constraints.
+1. Understand the problem and constraints.
 2. Identify relevant concepts and patterns.
-3. Develop a brute-force baseline.
+3. Develop a baseline approach.
 4. Look for optimization opportunities.
-5. Attempt the problem independently.
-6. Implement the solution.
-7. Test, debug, and examine edge cases.
+5. Attempt independently.
+6. Implement and test.
+7. Debug and examine edge cases.
 8. Analyze time and auxiliary-space complexity.
-9. Review the reasoning behind the solution.
-10. Revisit older patterns through practice.
+9. Review the reasoning.
+10. Revisit older patterns through spaced practice.
 11. Improve independent problem-solving ability.
 12. Commit meaningful work using Git.
 
@@ -218,7 +146,7 @@ The focus is on understanding, implementation, debugging, pattern recognition, a
 
 - C++
 - VS Code
-- Git and GitHub
+- Git & GitHub
 - LeetCode
 - Striver A2Z
 
