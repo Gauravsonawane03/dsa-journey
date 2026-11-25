@@ -35,6 +35,7 @@ Currently working on:
 - Preorder, inorder & postorder traversal
 - Level order traversal using BFS
 - Queue-based tree traversal
+- Binary tree depth and recursive relationships
 - Recursion base cases
 - Time and auxiliary-space analysis
 - Independent implementation
@@ -44,23 +45,25 @@ Currently working on:
 
 ---
 
-## Recent Progress — November 24, 2026
+## Recent Progress — November 25, 2026
 
 ### Binary Trees
 
-- Independently reconstructed a binary tree using `TreeNode` and pointers.
-- Reimplemented preorder, inorder, and postorder traversal from memory.
-- Verified traversal outputs on a custom tree.
-- Implemented Level Order Traversal using a queue and BFS.
-- Tested level-order traversal successfully.
-- Analyzed traversal time and auxiliary-space complexity.
+- Reconstructed Level Order Traversal using a queue and BFS.
+- Implemented Maximum Depth of Binary Tree.
+- Derived and implemented the recursive maximum-depth relationship.
+- Tested maximum depth on empty, single-node, balanced, and skewed trees.
+- Implemented recursive node counting.
+- Solved and accepted LeetCode 104 — Maximum Depth of Binary Tree.
+- Reconstructed and accepted LeetCode 206 — Reverse Linked List.
+- Reviewed pointer manipulation and linked-list reversal.
 
 ### Traversal Patterns
 
 ```text
-Preorder:   Root → Left → Right
-Inorder:    Left → Root → Right
-Postorder:  Left → Right → Root
+Preorder:    Root → Left → Right
+Inorder:     Left → Root → Right
+Postorder:   Left → Right → Root
 Level Order: Level by Level using a Queue
 ```
 
@@ -120,6 +123,7 @@ Patterns practised include:
 - Dummy-node linked-list technique
 - Binary tree traversal
 - Level order / BFS
+- Tree depth recursion
 
 ---
 
