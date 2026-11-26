@@ -52,6 +52,17 @@ int countNodes(TreeNode *root)
     }
     return 1 + countNodes(root->left) + countNodes(root->right);
 }
+int height(TreeNode *root, int &maxDiameter)
+{
+    if (root == nullptr)
+    {
+        return 0;
+    }
+    int leftH = height(root->left, maxDiameter);
+    int rightH = height(root->right, maxDiameter);
+    maxDiameter = max(maxDiameter, leftH + rightH);
+    return 1 + max(leftH, rightH);
+}
 int main()
 {
     TreeNode *root = new TreeNode(1);
@@ -79,5 +90,9 @@ int main()
     //         node3->right=node4;
     //    cout << "Max Depth: " << maxDepth(root) << endl;
     cout << "No of Nodes: " << countNodes(root) << endl;
+    //------------diameter-------------//
+    int maxDiameter = 0;
+    height(root, maxDiameter);
+    cout << "Diameter: " << maxDiameter << endl;
     return 0;
 }

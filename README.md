@@ -36,6 +36,7 @@ Currently working on:
 - Level order traversal using BFS
 - Queue-based tree traversal
 - Binary tree depth and recursive relationships
+- Binary tree diameter
 - Recursion base cases
 - Time and auxiliary-space analysis
 - Independent implementation
@@ -45,18 +46,20 @@ Currently working on:
 
 ---
 
-## Recent Progress — November 25, 2026
+## Recent Progress — November 26, 2026
 
 ### Binary Trees
 
-- Reconstructed Level Order Traversal using a queue and BFS.
-- Implemented Maximum Depth of Binary Tree.
-- Derived and implemented the recursive maximum-depth relationship.
-- Tested maximum depth on empty, single-node, balanced, and skewed trees.
-- Implemented recursive node counting.
-- Solved and accepted LeetCode 104 — Maximum Depth of Binary Tree.
-- Reconstructed and accepted LeetCode 206 — Reverse Linked List.
-- Reviewed pointer manipulation and linked-list reversal.
+- Independently reconstructed the maximum-depth recursion pattern.
+- Implemented Binary Tree Diameter using recursive height calculation.
+- Used a shared maximum-diameter value to track the best path across the tree.
+- Tested the diameter implementation on a binary tree.
+- Solved and accepted LeetCode 543 — Diameter of Binary Tree.
+
+### Pattern Retention
+
+- Reviewed Binary Search and independently implemented the search-space reduction approach.
+- Solved and accepted LeetCode 704 — Binary Search.
 
 ### Traversal Patterns
 
@@ -124,6 +127,7 @@ Patterns practised include:
 - Binary tree traversal
 - Level order / BFS
 - Tree depth recursion
+- Binary tree diameter
 
 ---
 
